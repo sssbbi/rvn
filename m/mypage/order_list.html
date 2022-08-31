@@ -1,0 +1,274 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<? $P_dp1 = "mypage";
+    $P_dp2 = "1";
+    include "../include/meta.html" ?>
+
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+	<body class="sub-body mypage">
+		<? include "../include/header.html" ?>
+
+		<main class="main sub-main">
+			<section class="my-page">
+				<!-- S : 마이페이지 메뉴 -->
+				<? include "mypage_nav.html" ?>
+				<!-- E : 마이페이지 메뉴 -->
+
+				<!-- S : 나의 회원 등급 -->
+				<? include "my_level.html" ?>
+				<!-- E : 나의 회원 등급 -->
+
+				<!-- S : 기간 검색 -->
+				<div class="py-5 border-top border-bottom">
+					<div class="container">
+						<div class="order-date">
+							<div class="order-date-period">
+								<a href="" class="on order-date-period__link">3개월</a>
+								<a href="" class="order-date-period__link">6개월</a>
+								<a href="" class="order-date-period__link">12개월</a>
+							</div>
+							<div class="row no-gutters mt-1">
+								<div class="order-date-calendar col">
+									<div class="row no-gutters align-items-center">
+										<div class="col">
+											<input type="text" name="" id="" class="input-date datepicker w-100" />
+										</div>
+										<div class="col-auto px-2 text-sub">~</div>
+										<div class="col">
+											<input type="text" name="" id="" class="input-date datepicker w-100" />
+										</div>
+									</div>
+								</div>
+								<div class="col-auto pl-1">
+									<input type="button" value="조회" class="order-date-btn btn-type-03 btn-type-03--xsmall h-100 px-5" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E : 기간 검색 -->
+
+				<div class="py-5">
+					<div class="container">
+						<div class="myp-product">
+							<div class="recently-bx bg-light p-4">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">주문번호</p>
+									<p class="recently-bx__txt">2021010101213</p>
+								</div>
+								<div class="row align-items-center no-gutters mt-2">
+									<p class="recently-bx__tit">렌트신청일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+
+									<p class="recently-bx__tit">반납일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+								</div>
+
+								<a href="order_list__detail.html" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 mt-2">자세히 보기</a>
+								<a href="#none" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 mt-2 ml-1">반납신청</a>
+							</div>
+
+							<div class="mt-4 px-4 py-3 border-top border-bottom">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">렌트상태</p>
+									<p class="recently-bx__txt">배송중</p>
+								</div>
+							</div>
+
+							<div class="product-list m-0">
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="myp-product">
+							<div class="recently-bx bg-light p-4">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">주문번호</p>
+									<p class="recently-bx__txt">2021010101213</p>
+
+									<a href="order_list__detail.html" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 ml-2">자세히 보기</a>
+								</div>
+								<div class="row align-items-center no-gutters mt-2">
+									<p class="recently-bx__tit">렌트신청일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+
+									<p class="recently-bx__tit">반납일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+								</div>
+							</div>
+
+							<div class="mt-4 px-4 py-3 border-top border-bottom">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">렌트상태</p>
+									<p class="recently-bx__txt">배송중</p>
+								</div>
+							</div>
+
+							<div class="product-list m-0">
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="myp-product">
+							<div class="recently-bx bg-light p-4">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">주문번호</p>
+									<p class="recently-bx__txt">2021010101213</p>
+
+									<a href="order_list__detail.html" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 ml-2">자세히 보기</a>
+								</div>
+								<div class="row align-items-center no-gutters mt-2">
+									<p class="recently-bx__tit">렌트신청일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+
+									<p class="recently-bx__tit">반납일</p>
+									<p class="recently-bx__txt">2021. 01. 01</p>
+								</div>
+							</div>
+
+							<div class="mt-4 px-4 py-3 border-top border-bottom">
+								<div class="row align-items-center no-gutters">
+									<p class="recently-bx__tit">렌트상태</p>
+									<p class="recently-bx__txt">배송중</p>
+								</div>
+							</div>
+
+							<div class="product-list m-0">
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+									<div class="inner">
+										<a href="../product/view.html" class="img-bx">
+											<span class="img-size">
+												<img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+											</span>
+										</a>
+										<div class="txt-bx">
+											<p class="brand-name text-gray-0">BRAND NAME</p>
+											<p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+											<div class="shipping-link text-right">
+												<a href="javascript:void(0);">CJ대한통운 <span class="link-btn">[12345678910]</span></a>
+											</div>
+											<div class="now-status w-100 pl-4 d-flex justify-content-between">
+												<p>Size : L</p>
+												<a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

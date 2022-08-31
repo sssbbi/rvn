@@ -1,0 +1,139 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "2";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">
+              RVN EXPERIENCE에 가입하고<br />
+              RVN만의 특별한 경험을 만나보세요 :-)
+            </h4>
+
+            <div class="login-list">
+              <ul>
+                <!-- 유효성 체크 시 addClass 're-check' -->
+                <li>
+                  <p class="tit">아이디</p>
+                  <input type="text" name="user_id" id="user_id" class="w-100" placeholder="아이디를 입력해주세요." />
+                  <p class="font-14 text-primary mt-2">사용 가능한 아이디입니다.</p>
+                  <!-- <p class="font-14 text-red mt-2">일치하는 아이디가 없습니다.</p> -->
+                </li>
+                <li>
+                  <p class="tit">비밀번호</p>
+                  <input type="password" name="user_pw" id="user_pw" class="w-100 re-check" placeholder="영문+숫자 조합 6~15자 이내로 입력해주세요." />
+                  <!-- <p class="font-14 text-primary mt-2">사용 가능한 비밀번호입니다.</p> -->
+                  <p class="font-14 text-red mt-2">영문+숫자 조합 6~15자 이내로 입력해주세요.</p>
+                </li>
+                <li class="mt-2">
+                  <input type="password" name="user_pw2" id="user_pw2" class="w-100 re-check" placeholder="비밀번호를 다시 한번 입력해주세요." />
+                  <!-- <p class="font-14 text-primary mt-2">비밀번호가 일치합니다.</p> -->
+                  <p class="font-14 text-red mt-2">비밀번호가 일치하지 않습니다.</p>
+                </li>
+                <li>
+                  <p class="tit">이메일</p>
+                  <input type="email" name="email" id="email" class="w-100" placeholder="입력하신 이메일로 서비스 관련 주요사항이 안내됩니다." />
+                  <p class="font-14 text-primary mt-2">이메일 정보를 확인했습니다.</p>
+                  <!-- <p class="font-14 text-red mt-2">이메일 형식이 올바르지 않습니다.</p> -->
+                </li>
+
+                <li>
+                  <input type="button" class="btn-type-03 w-100 font-14" value="본인인증" />
+                </li>
+
+                <li>
+                  <p class="tit">이름</p>
+                  <input type="text" name="uname" id="uname" class="w-100" readonly />
+                </li>
+                <li>
+                  <p class="tit">휴대폰번호</p>
+                  <input type="tel" name="uname" id="uname" class="w-100" readonly />
+                </li>
+              </ul>
+
+              <div class="terms-chk mt-10">
+                <div class="terms-chk__head">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <input type="checkbox" name="all_agree" id="all_agree" />
+                      <label for="all_agree">[필수] 이용약관 및 개인 정보 수집/이용</label>
+                    </div>
+                    <div class="icon xi-angle-up"></div>
+                  </div>
+                </div>
+                <div class="terms-chk__body">
+                  <div class="terms-tr">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <input type="checkbox" name="terms_agree" id="terms_agree" />
+                        <label for="terms_agree">[필수] 이용약관</label>
+                      </div>
+                      <div>
+                        <a href="javascript:void(0);" class="terms-txt-open">보기</a>
+                      </div>
+                    </div>
+                    <div class="terms-txt">
+                      <? include "../policy/terms_txt.html" ?>
+                    </div>
+                  </div>
+                  <div class="terms-tr mt-4">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <input type="checkbox" name="privacy_agree" id="privacy_agree" />
+                        <label for="privacy_agree">[필수] 개인 정보 수집/이용</label>
+                      </div>
+                      <div>
+                        <a href="javascript:void(0);" class="terms-txt-open">보기</a>
+                      </div>
+                    </div>
+                    <div class="terms-txt">
+                      <? include "../policy/privacy_txt.html" ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="terms-chk mt-2">
+                <div class="terms-chk__head">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <input type="checkbox" name="all_agree2" id="all_agree2" />
+                      <label for="all_agree2">[선택] 마케팅 정보 수집 활용 동의</label>
+                    </div>
+                    <div class="icon xi-angle-up"></div>
+                  </div>
+                </div>
+                <div class="terms-chk__body">
+                  <div class="terms-tr">
+                    <input type="checkbox" name="mail_agree" id="mail_agree" />
+                    <label for="mail_agree">[선택] 이메일 수신 동의</label>
+                  </div>
+                  <div class="terms-tr mt-4">
+                    <input type="checkbox" name="sms_agree" id="sms_agree" />
+                    <label for="sms_agree">[선택] SMS 수신 동의</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <input type="submit" class="btn-type-03 w-100 font-14" value="회원가입" onclick="location.href='sign_up_complete.html'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

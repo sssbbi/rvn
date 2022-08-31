@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+// HEADER
+.nav {
+  padding: 20px 0 23px;
+  .container {
+    max-width: 1800px;
+    position: static;
+  }
+  .nav-list--depth1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .depth-1 {
+      flex: 0 1 auto;
+      padding: 0 22px;
+      //padding: 20px 0 23px;
+      > a {
+        display: block;
+        font-size: 18px;
+        padding: 5px 0;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          //right: 0;
+          bottom: 0;
+          height: 1px;
+          background: $primary;
+          //opacity: 0;
+          width: 0;
+          transition: width 0.3s;
+        }
+
+        &.on,
+        &.active {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .depth-1 + .depth-1 {
+      a::before {
+        content: '';
+        position: absolute;
+        left: -22px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 13px;
+        background: $gray-c;
+      }
+    }
+
+    .nav-list--depth2 {
+      display: none;
+      //display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      padding: 23px 2.5vw 60px;
+      // padding-bottom: 60px;
+      // padding-top: 23px;
+      // margin-left: auto;
+      // margin-right: auto;
+      z-index: 3;
+      text-align: left;
+      background: $white;
+      min-width: 1224px;
+      padding: 20px 2.5vw;
+      > li {
+        // flex: 1 0 16.66%;
+        // max-width: 16.66%;
+        //padding-top: 40px;
+        //padding-right: 15px;
+        flex: 0 1 auto;
+        padding: 20px;
+        > a {
+          text-transform: uppercase;
+        }
+      }
+      .nav-list--depth3 {
+        //padding-top: 12px;
+        display: none;
+        li {
+          font-size: 15px;
+          color: $gray-5;
+          margin: 11px 0;
+          a:hover {
+            color: $primary;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .nav-list__item {
+    &--policy {
+      display: none !important;
+    }
+  }
+}
+
+// .nav-bg {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: auto;
+//   background: $white;
+//   display: none;
+//   z-index: 2;
+// }

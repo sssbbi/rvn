@@ -1,0 +1,51 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "4";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">FIND PASSWORD</h4>
+
+            <div class="login-list py-8">
+              <div class="text-center">
+                <img src="../assets/images/icon/find_complete_pw_i.png" width="51" alt="비밀번호" />
+                <p class="common-text--xs mt-5">본인확인이 완료되었습니다.<br> 신규 비밀번호를 설정해주세요.</p>
+              </div>
+
+              <ul class="mt-10">
+                <li>
+                  <p class="tit">비밀번호</p>
+                  <input type="password" name="user_pw" id="user_pw" class="w-100" placeholder="비밀번호를 입력해주세요." />
+                  <p class="text-primary mt-2">사용 가능한 비밀번호입니다.</p>
+                  <!-- <p class="text-red mt-2">영문+숫자 조합 6~15자 이내로 입력해주세요.</p> -->
+                </li>
+                <li class="mt-2">
+                  <!-- 유효성 체크 시 addClass 're-check' -->
+                  <input type="password" name="user_pw2" id="user_pw2" class="w-100 re-check" placeholder="비밀번호를 다시 한번 입력해주세요." />
+                  <!-- <p class="text-primary mt-2">비밀번호가 일치합니다.</p> -->
+                  <p class="text-red mt-2">비밀번호가 일치하지 않습니다.</p>
+                </li>
+                <li class="mt-5">
+                  <input type="submit" class="btn-type-03 w-100" value="비밀번호 변경" onclick="location.href='find_complete_pw.html'" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

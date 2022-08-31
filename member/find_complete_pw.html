@@ -1,0 +1,39 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "4";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">FIND PASSWORD</h4>
+
+            <div class="login-list">
+              <div class="text-center">
+                <img src="../assets/images/icon/find_complete_id_i.png" alt="찾기 완료" />
+                <p class="mt-5">비밀번호 변경이 완료되었습니다.</p>
+              </div>
+
+              <ul class="mt-10">
+                <li>
+                  <input type="button" class="btn-type-03 w-100 font-14" value="로그인 하기" onclick="location.href='sign_in.html'" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

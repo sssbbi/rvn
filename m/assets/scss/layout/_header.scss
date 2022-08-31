@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  transition: all 0.3s ease;
+
+  &.scroll {
+    transform: translateY(-100%);
+  }
+  &.up {
+    transform: translateY(0);
+  }
+
+  .container {
+    height: $nav-height;
+    border-bottom: 1px solid $gray-e;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    //margin-bottom: 20px;
+    a {
+      //display: block;
+    }
+  }
+
+  .cart {
+    padding-right: 9px;
+    position: relative;
+    text-align: center;
+    .count {
+      width: 16px;
+      height: 16px;
+      background: $black;
+      border-radius: 100%;
+      line-height: 16px;
+      color: $white;
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .current-page {
+    display:flex;
+    align-items: center;
+    margin-left: -15px;
+
+    &__link {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding:0 15px;
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    &__txt {
+      font-weight: 500;
+      margin-left: 15px;
+    }
+    &__link + .current-page__txt {
+      margin-left: 0;
+    }
+  }
+}
+
+.main-body,
+.sub-body {
+  padding-top: $nav-height;
+}

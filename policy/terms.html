@@ -1,0 +1,36 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "policy";
+    $P_dp2 = "1";
+    include "../include/meta.html" ?>
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item"><?=${nav_.$P_dp1._.$P_dp2}?></li>
+        </ul>
+      </div>
+
+      <section class="section pt-5">
+        <div class="container">
+          <h4 class="h4 mb-5"><?=${nav_.$P_dp1._.$P_dp2}?></h4>
+
+          <div class="policy-txt">
+            <? include "../policy/terms_txt.html" ?>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

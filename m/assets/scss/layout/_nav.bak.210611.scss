@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+// nav mobile
+.nav-mobile {
+  //display: none;
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  //right: 0;
+  top: $nav-height;
+  bottom: $nav-height;
+  background: $white;
+  z-index: 101;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: left 0.3s;
+
+  &.top-0 {
+    top: 0;
+  }
+  &.top-h {
+    top: $nav-height;
+  }
+
+  &.active {
+    //display: block;
+    left: 0;
+  }
+
+  &__head {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+
+    .my-item {
+      border-top: 1px solid #f1f1f1;
+      .icon {
+        position: relative;
+        .count {
+          width: 19px;
+          height: 19px;
+          line-height: 19px;
+          background: $black;
+          border-radius: 50%;
+          position: absolute;
+          right: -2px;
+          top: -3px;
+          z-index: 1;
+          color: $white;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    .nav-list--depth1 {
+      .depth-1 {
+        > .link {
+          display: block;
+          font-size: 16px;
+          line-height: 44px;
+          border-bottom: 1px solid #f1f1f1;
+          padding: 0 20px;
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 20px;
+            position: absolute;
+            right: 18px;
+            top: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url(../images/icon/arrow1.svg);
+            transform: rotate(-90deg);
+          }
+        }
+
+        &.__down > .link {
+          &::after {
+            transform: rotate(0);
+          }
+          &.active::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .nav-list--depth2 {
+      display: none;
+      background: #f6f6f6;
+      padding: 10px 20px;
+      border-bottom: 1px solid #f1f1f1;
+      .depth-2 {
+        > .link {
+          font-size: 14px;
+          padding: 7px 20px;
+          display: block;
+        }
+      }
+    }
+    .nav-list--depth3 {
+      display: none;
+    }
+  }
+
+  &__foot {
+    display: flex;
+    flex-wrap: wrap;
+    .link {
+      flex: 1;
+      padding: 25px 0;
+      font-size: 13px;
+      font-family: $font-family-sub;
+      color: $gray-5;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.3;
+      position: relative;
+    }
+
+    .link + .link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 20px;
+      background: #ebebeb;
+    }
+  }
+}

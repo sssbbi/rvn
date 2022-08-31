@@ -1,0 +1,24 @@
+<? include "../include/arr_data.php" ?>
+<div class="pop-wrap w-580 no-close">
+  <div class="pop-header text-center">
+    <h5 class="h5 font-weight-medium">취소 신청을 하시겠습니까?</h5>
+  </div>
+  <div class="pop-body text-center common-text--xs">
+    <p>결제 환불은 결제 수단에 따라<br> 최소 3~7일 이후 환불 처리됩니다.<br /></p>
+    <p class="mt-2">
+      (자세한 사항은 고객센터
+      <?=$P_tel1?>로 문의바랍니다.)
+    </p>
+  </div>
+  <div class="pop-footer">
+    <div class="btn-bx">
+      <button type="button" class="btn btn-type-04" onclick="closePopup();">아니오</button>
+      <button type="button" class="btn btn-type-03">네</button>
+    </div>
+  </div>
+</div>
+<script>
+  function closePopup() {
+    $.magnificPopup.close();
+  }
+</script>

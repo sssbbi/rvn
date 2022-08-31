@@ -1,0 +1,58 @@
+<div class="modal modal--custom" id="identify" tabindex="-1" aria-labelledby="" aria-hidden="false" data-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered w-640">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="h5 font-weight-medium">본인인증</h5>
+        <button type="button" class="xi xi-close" data-dismiss="modal"></button>
+
+        <p class="mt-4 text-gray-5">SNS 연동을 위해 본인 인증을 해주세요.</p>
+      </div>
+      <div class="modal-body mt-8 mb-8">
+        <div class="terms-chk">
+          <div class="terms-chk__head">
+            <div class="d-flex justify-content-between">
+              <div>
+                <input type="checkbox" name="all_agree" id="all_agree" />
+                <label for="all_agree">[필수] 이용약관 및 개인 정보 수집/이용</label>
+              </div>
+              <div class="icon xi-angle-up"></div>
+            </div>
+          </div>
+          <div class="terms-chk__body">
+            <div class="terms-tr">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <input type="checkbox" name="terms_agree" id="terms_agree" />
+                  <label for="terms_agree">[필수] 이용약관</label>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="terms-txt-open">보기</a>
+                </div>
+              </div>
+              <div class="terms-txt">
+                <? include "../policy/terms_txt.html" ?>
+              </div>
+            </div>
+            <div class="terms-tr mt-4">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <input type="checkbox" name="privacy_agree" id="privacy_agree" />
+                  <label for="privacy_agree">[필수] 개인 정보 수집/이용</label>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="terms-txt-open">보기</a>
+                </div>
+              </div>
+              <div class="terms-txt">
+                <? include "../policy/privacy_txt.html" ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-type-03 w-100">로그인</button>
+      </div>
+    </div>
+  </div>
+</div>

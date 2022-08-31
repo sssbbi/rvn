@@ -1,0 +1,46 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "2";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">
+              가입완료!<br />
+              RVN만의 특별한 경험이 시작됩니다.
+            </h4>
+
+            <div class="login-list">
+              <div class="text-center">
+                <img src="../assets/images/icon/rvn_i.png" alt="RVN" />
+                <p class="mt-5">RVN EXPERIENCE의 프리미엄 멤버십은</p>
+                <p class="mt-2">당신의 경험을 더욱 특별하게 만들어줍니다.</p>
+              </div>
+
+              <div class="btn-bx d-flex">
+                <div class="col-6">
+                  <input type="button" class="font-14 w-100 btn-type-04" value="RVN EXPERIENCE 시작하기" />
+                </div>
+                <div class="col-6">
+                  <input type="button" class="font-14 w-100 btn-type-03" value="더욱 특별한 경험하기" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

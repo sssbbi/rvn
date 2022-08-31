@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.img-size {
+  @include img-to-bg(percentage(414/276), cover);
+}
+.product-view-page {
+  .img-size {
+    @include img-to-bg(percentage(414/276), contain);
+  }
+}
+.zoomImg {
+  cursor: zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}

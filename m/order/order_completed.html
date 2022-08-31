@@ -1,0 +1,58 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "shop";
+    $P_dp2 = "2";
+    $P_page_txt = "주문완료";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/order.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="order-completed pt-8">
+        <div class="container">
+          <h2 class="h2 mb-4">Thank you!</h2>
+          <p class="">
+            당신을 변화시킬 <span class="px-1"><img src="../assets/images/main/logo_small.png" alt="RVN" height="14" /></span> 이 지금 출발합니다.
+          </p>
+
+          <div class="order-receipt">
+            <div class="text-center">
+              <img src="../assets/images/icon/order_receipt_i.png" width="26" alt="체크" />
+              <h4 class="common-title font-weight-semibold mt-3">ORDER RECEIPT</h4>
+            </div>
+            <div class="order-receipt-info">
+              <div class="order-receipt-info__tr">
+                <p class="tt">주문번호</p>
+                <div class="cont">20201123456848</div>
+              </div>
+              <div class="order-receipt-info__tr">
+                <p class="tt">주문상품</p>
+                <div class="cont">A라인 블랙 미니 원피스</div>
+              </div>
+              <div class="order-receipt-info__tr">
+                <p class="tt">결제금액</p>
+                <div class="cont">￦ 120,000</div>
+              </div>
+              <div class="order-receipt-info__tr">
+                <p class="tt">결제수단</p>
+                <div class="cont">신용카드</div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <a href="../mypage/order_list.html" class="w-49 btn-type-04 px-0">주문내역 확인</a>
+              <a href="../main/main.html" class="w-49 btn-type-03 px-0">계속 RVN 탐색하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

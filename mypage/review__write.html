@@ -1,0 +1,149 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item">My page</li>
+        </ul>
+      </div>
+
+      <section class="my-page">
+        <div class="container">
+          <!-- S : 나의 회원 등급 -->
+          <div class="my-level">
+            <div class="my-level__info"><span class="text-gray-0 name">홍길동</span> 님의 회원 등급은 <span class="text-gray-0 level">PIONEER (Lv.1)</span> 입니다.</div>
+            <a href="" class="my-level__link text-gray-0">프리미엄 멤버십 가입하기</a>
+          </div>
+          <!-- E : 나의 회원 등급 -->
+
+          <div class="my-page-wrap">
+            <!-- S : 마이페이지 좌측 메뉴 -->
+            <div class="my-page-nav">
+              <h4 class="h4"><a href="<?=$nav_mypage_href?>">My page</a></h4>
+              <? include "mypage_nav.html" ?>
+            </div>
+            <!-- E : 마이페이지 좌측 메뉴 -->
+
+            <!-- S : 마이페이지 우측 컨텐츠 -->
+            <div class="my-page-cont">
+              <h5 class="mt-1 pb-5 h5 font-weight-medium">리뷰 관리</h5>
+
+              <div class="p-6 border border-gray-c mb-10">
+                <p class="font-weight-medium d-flex align-items-center mb-4"><img src="../assets/images/icon/information.svg" class="mr-2" alt="info" /> 리뷰작성 안내</p>
+
+                <ul class="bullet-list bullet-list--txt font-14 text-gray-5" style="line-height: 1.5">
+                  <li class="item" data-bullet="·">대여 완료 후 90일내 리뷰 작성 시 작성 조건에 따라 마일리지가 지급됩니다.</li>
+                  <li class="item mt-2" data-bullet="·">리뷰 작성 조건에 맞지 않는 경우 마일리지 지급이 보류 됩니다.</li>
+                  <li class="item mt-2" data-bullet="·">게시물의 성격에 맞지 않는 내용은 임의로 삭제 될 수 있습니다.</li>
+                </ul>
+              </div>
+
+              <!-- S : list -->
+              <div class="ordered-list">
+                <div class="ordered-list__tr py-5 row no-gutters align-items-center">
+                  <div class="col-6 pr-12">
+                    <div class="product-list product-list--type4">
+                      <div class="product-list__item product-list__item--type4">
+                        <div class="inner">
+                          <a href="../product/view.html" class="img-bx">
+                            <span class="img-size">
+                              <img src="../images/board/product_img.jpg" alt="상품 이미지" />
+                            </span>
+                          </a>
+                          <div class="txt-bx">
+                            <p class="brand-name">BRAND NAME</p>
+                            <p class="product-name text-truncate-2">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col text-center font-14">
+                    <p class="text-gray-5">렌트 신청일</p>
+                    <p class="font-weight-bold mt-2">2021. 04. 27</p>
+                  </div>
+                  <div class="col text-center font-14">
+                    <p class="text-gray-5">렌트 반납일</p>
+                    <p class="font-weight-bold mt-2">2021. 04. 27</p>
+                  </div>
+                  <div class="col-auto px-8 text-center font-14">
+                    <p class="text-gray-5">배송완료</p>
+                  </div>
+                </div>
+              </div>
+              <!-- E : list -->
+
+              <!-- S : write form -->
+              <h5 class="h5 mt-10 mb-5 font-weight-medium" style="letter-spacing: -0.02em">리뷰 작성</h5>
+              <table class="table table--review">
+                <colgroup>
+                  <col class="col-w-1" />
+                  <col width="*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="pt-5" colspan="2">
+                      <div class="ratings ratings--large mb-4">
+                        <input type="hidden" name="" id="ratings-score" />
+                        <div class="ratings__star">
+                          <div class="star" data-value="1"></div>
+                          <div class="star" data-value="2"></div>
+                          <div class="star" data-value="3"></div>
+                          <div class="star" data-value="4"></div>
+                          <div class="star" data-value="5"></div>
+                        </div>
+                        <div class="ratings__text ml-1"></div>
+                      </div>
+
+                      <textarea name="" id="" cols="30" rows="10" class="area_for" placeholder="리뷰를 작성해주세요."></textarea>
+                      <p class="text-right font-12 mt-2 text-gray-5 text-sub">0/100자</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사진첨부</th>
+                    <td>
+                      <div class="input_wrap file_box">
+                        <p></p>
+                        <span class="btn_type_file">이미지 첨부</span>
+                        <input type="file" name="bf_file[]" />
+                      </div>
+                      <p class="font-12 mt-2 text-gray-5 text-sub">jpg, png 파일만 첨부가능, 첨부파일 용량 10MB 이내</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="pb-5">SNS 링크</th>
+                    <td class="pb-5">
+                      <input type="text" class="w-100" name="sns_link" id="sns_link" />
+                      <p class="font-12 mt-2 text-gray-5 text-sub">http:// 를 포함하여 입력해주세요.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- E : write form -->
+
+              <div class="mt-12 text-center">
+                <input type="submit" value="작성완료" class="btn-type-03" />
+              </div>
+            </div>
+            <!-- E : 마이페이지 우측 컨텐츠 -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

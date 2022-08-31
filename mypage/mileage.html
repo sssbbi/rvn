@@ -1,0 +1,129 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item">My page</li>
+        </ul>
+      </div>
+
+      <section class="my-page">
+        <div class="container">
+          <!-- S : 나의 회원 등급 -->
+          <div class="my-level">
+            <div class="my-level__info"><span class="text-gray-0 name">홍길동</span> 님의 회원 등급은 <span class="text-gray-0 level">PIONEER (Lv.1)</span> 입니다.</div>
+            <a href="" class="my-level__link text-gray-0">프리미엄 멤버십 가입하기</a>
+          </div>
+          <!-- E : 나의 회원 등급 -->
+
+          <div class="my-page-wrap">
+            <!-- S : 마이페이지 좌측 메뉴 -->
+            <div class="my-page-nav">
+              <h4 class="h4"><a href="<?=$nav_mypage_href?>">My page</a></h4>
+              <? include "mypage_nav.html" ?>
+            </div>
+            <!-- E : 마이페이지 좌측 메뉴 -->
+
+            <!-- S : 마이페이지 우측 컨텐츠 -->
+            <div class="my-page-cont">
+              <h5 class="mt-1 h5 mb-5 font-weight-medium">마일리지</h5>
+
+              <div class="p-5 text-center border border-black mb-2">
+                <p class="font-18">보유한 총 마일리지 : <span class="text-primary font-weight-medium">1900</span></p>
+              </div>
+
+              <div class="p-6 border border-gray-c">
+                <p class="font-weight-medium d-flex align-items-center mb-4"><img src="../assets/images/icon/information.svg" class="mr-2" alt="info" /> 마일리지 안내</p>
+
+                <ul class="bullet-list bullet-list--txt font-14 text-gray-5" style="line-height: 1.5">
+                  <li class="item" data-bullet="·">마일리지는 회원 등급과 상관 없이 결제 금액의 1%가 '반납완료' 시점에 자동 적립 됩니다.</li>
+                  <li class="item mt-2" data-bullet="·">
+                    대여 상품에 대한 리뷰 작성 시 리뷰 형태에 따라 마일리지가 차등 적립 됩니다.<br />
+                    (텍스트 리뷰 : 500Mil / 포토리뷰 1,000Mil / SNS 리뷰 2,000M)
+                  </li>
+                  <li class="item mt-2" data-bullet="·">적립된 마일리지는 '일반 대여 시' 에만 제한 없이 사용 가능합니다.</li>
+                  <li class="item mt-2" data-bullet="·">적립된 마일리지는 적립일 기준 1년 후 자동 소멸 됩니다.</li>
+                </ul>
+              </div>
+
+              <table class="table table--qna mt-10">
+                <colgroup>
+                  <col width="*" />
+                  <col width="20%" />
+                  <col width="20%" />
+                  <col width="20%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>내용</th>
+                    <th>적립/사용</th>
+                    <th>포인트</th>
+                    <th>적용일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>구매적립</td>
+                    <td>사용</td>
+                    <td class="font-weight-bold text-black">- 500</td>
+                    <td>2021.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>텍스트리뷰</td>
+                    <td>적립</td>
+                    <td class="font-weight-bold text-black">+ 500</td>
+                    <td>2021.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>포토리뷰</td>
+                    <td>적립</td>
+                    <td class="font-weight-bold text-black">+ 1000</td>
+                    <td>2021.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- S : paging -->
+              <div class="paging-area">
+                <ul class="text-center">
+                  <li>
+                    <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="active">1<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">2<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">3<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="next"><span>다음으로</span></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- E : paging -->
+            </div>
+            <!-- E : 마이페이지 우측 컨텐츠 -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

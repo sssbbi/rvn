@@ -1,0 +1,43 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "4";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">FIND PASSWORD</h4>
+
+            <div class="login-list py-8">
+              <div class="text-center">
+                <img src="../assets/images/icon/find_i.png" width="51" alt="휴대폰으로 찾기" />
+                <p class="common-text--xs mt-5 mx-n1">휴대폰 본인 인증으로 비밀번호를 변경 할 수 있습니다.</p>
+              </div>
+
+              <ul class="mt-10">
+                <li>
+                  <p class="tit">아이디</p>
+                  <input type="text" name="user_id" id="user_id" class="w-100" placeholder="아이디를 입력해주세요." />
+                </li>
+                <li class="mt-5">
+                  <input type="submit" class="btn-type-03 w-100" value="본인인증" onclick="location.href='change_pw.html'" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

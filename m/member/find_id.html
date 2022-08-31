@@ -1,0 +1,39 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "member";
+    $P_dp2 = "3";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="member">
+        <div class="container">
+          <div class="login-wrap">
+            <h4 class="h4 text-center">FIND ID</h4>
+
+            <div class="login-list py-8">
+              <div class="text-center">
+                <img src="../assets/images/icon/find_i.png" width="51" alt="휴대폰으로 찾기" />
+                <p class="common-text--xs mt-5">휴대폰 본인 인증으로 아이디를 찾을 수 있습니다.</p>
+              </div>
+
+              <ul class="mt-10">
+                <li>
+                  <input type="button" class="btn-type-03 w-100" value="본인인증" onclick="location.href='find_complete_id.html'" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

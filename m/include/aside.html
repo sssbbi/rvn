@@ -1,0 +1,138 @@
+<!-- S : 하단 고정 dock bar -->
+<div id="dock-bar" class="dock-bar">
+  <a href="javascript:void(0);" class="dock-bar__link nav-mobile-btn" title="카테고리">
+    <span class="icon"><img src="../assets/images/icon/dock_bar_i1.png" width="20" alt="카테고리" /></span>
+    <span class="icon __active"><img src="../assets/images/icon/dock_bar_i1_active.png" width="20" alt="카테고리" /></span>
+    <span class="title">카테고리</span>
+  </a>
+  <a href="javascript:void(0);" class="dock-bar__link search-mobile-btn" title="검색">
+    <span class="icon"><img src="../assets/images/icon/dock_bar_i2.png" width="20" alt="검색" /></span>
+    <span class="icon __active"><img src="../assets/images/icon/dock_bar_i2_active.png" width="20" alt="검색" /></span>
+    <span class="title">검색</span>
+  </a>
+  <a href="../main/main.html" class="dock-bar__link" title="홈">
+    <span class="icon"><img src="../assets/images/icon/dock_bar_i3.png" width="20" alt="홈" /></span>
+    <span class="title">홈</span>
+  </a>
+  <a href="../mypage/index.html" class="dock-bar__link" title="마이페이지">
+    <span class="icon"><img src="../assets/images/icon/dock_bar_i4.png" width="20" alt="마이페이지" /></span>
+    <span class="title">마이페이지</span>
+  </a>
+  <a href="../member/sign_in.html" class="dock-bar__link" title="최근본상품">
+    <span class="icon"><img src="../assets/images/icon/dock_bar_i5.png" width="20" alt="최근본상품" /></span>
+    <span class="title">최근본상품</span>
+  </a>
+</div>
+<!-- E : 하단 고정 dock bar -->
+
+<!-- S : 모바일 navigation -->
+<aside class="nav-mobile">
+  <div class="nav-mobile__close">
+    <a href="javascript:void(0);" class="nav-close-btn">
+      <img src="../assets/images/icon/arrow1.svg" />
+    </a>
+  </div>
+  <!-- S : 로그인 전 -->
+  <!-- <div class="nav-mobile__head text-center">
+    <img src="../assets/images/icon/ci.png" width="60" alt="RVN" />
+    <p class="common-text--xs py-3">로그인하여 RVN만의 특별한 경험을 만나보세요.</p>
+    <a href="" class="btn-type-03 px-8">로그인/회원가입</a>
+  </div> -->
+  <!-- E : 로그인 전 -->
+
+  <!-- S : 로그인 후 -->
+  <div class="nav-mobile__head px-5">
+    <div class="my-information row no-gutters align-items-center pb-5">
+      <div class="col-auto">
+        <img src="../assets/images/icon/lv_icon.png" width="45" alt="level" />
+      </div>
+      <div class="col px-3">
+        <div class="d-flex align-items-center">
+          <p class="font-weight-medium">홍길동<span class="text-gray-5 common-text--xxs">님</span></p>
+          <a href="../mypage/index.html" class="ml-2"><img src="../assets/images/icon/setting_i.png" width="16" alt="setting" /></a>
+        </div>
+        <p class="common-text--xxs mt-2 text-primary">VANQUISHER Lv.4</p>
+      </div>
+      <div class="mileage col-auto text-right">
+        <p class="common-text--xxs text-gray-9 mb-2">마일리지</p>
+        <p class="common-text--md font-weight-semibold">1,000,000</p>
+      </div>
+    </div>
+    <div class="my-item row no-gutters align-items-center pt-5">
+      <a href="../mypage/order_list.html" class="my-item__link col text-center">
+        <span class="icon">
+          <img src="../assets/images/icon/nav_my_i1.png" width="40" alt="주문/배송조회" />
+          <span class="count">1</span>
+        </span>
+        <p class="common-text--xxs mt-1">주문/배송조회</p>
+      </a>
+      <a href="../mypage/order_list.html" class="my-item__link col text-center">
+        <span class="icon">
+          <img src="../assets/images/icon/nav_my_i2.png" width="40" alt="작성가능한리뷰" />
+          <span class="count">2</span>
+        </span>
+        <p class="common-text--xxs mt-1">작성가능한리뷰</p>
+      </a>
+      <a href="javascript:alert('준비중입니다.')" class="my-item__link col text-center">
+        <span class="icon">
+          <img src="../assets/images/icon/nav_my_i3.png" width="40" alt="보유쿠폰" />
+          <span class="count">3</span>
+        </span>
+        <p class="common-text--xxs mt-1">보유쿠폰</p>
+      </a>
+    </div>
+  </div>
+  <!-- E : 로그인 후 -->
+
+  <div class="nav-mobile__body">
+    <nav class="nav">
+      <? include "../include/nav.html" ?>
+    </nav>
+  </div>
+
+  <div class="nav-mobile__foot">
+    <a class="link" href="../customer_center/notice.html">
+      <span class="icon pr-2">
+        <img src="../assets/images/icon/nav_footer_i1.png" width="16" alt="물음표" />
+      </span>
+      Help
+    </a>
+    <a class="link" href="../customer_center/qna.html">
+      <span class="icon pr-2">
+        <img src="../assets/images/icon/nav_footer_i2.png" width="16" alt="펜" />
+      </span>
+      1:1문의
+    </a>
+    <a class="link" href="">
+      <span class="icon pr-2">
+        <img src="../assets/images/icon/nav_footer_i3.png" width="16" alt="로그아웃" />
+      </span>
+      Log out
+    </a>
+  </div>
+</aside>
+<!-- E : 모바일 navigation -->
+
+<!-- S : 검색 영역 -->
+<div class="search-mobile__bg"></div>
+
+<div class="search-mobile">
+  <div class="search-mobile__close">
+    <img src="../assets/images/icon/arrow1.svg" alt="arrow down" />
+  </div>
+  <div class="container">
+    <div class="search-mobile__inp">
+      <input type="text" class="search-input w-100" placeholder="검색어를 입력하세요" name="" id="" value="" />
+      <input type="submit" class="search-btn" onclick="" />
+    </div>
+    <p class="tit text-gray-9 pt-2 pb-3">추천 검색어</p>
+    <div class="search-mobile__terms">
+      <a href="">#black</a>
+      <a href="">#dress</a>
+      <a href="">#pant</a>
+      <a href="">#flat</a>
+      <a href="">#pink</a>
+    </div>
+  </div>
+</div>
+<!-- E : 검색 영역 -->

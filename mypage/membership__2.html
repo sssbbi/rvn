@@ -1,0 +1,93 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/order.min.css" />
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item">My page</li>
+        </ul>
+      </div>
+
+      <section class="my-page">
+        <div class="container">
+          <!-- S : 나의 회원 등급 -->
+          <div class="my-level">
+            <div class="my-level__info"><span class="text-gray-0 name">홍길동</span> 님의 회원 등급은 <span class="text-gray-0 level">PIONEER (Lv.1)</span> 입니다.</div>
+            <a href="" class="my-level__link text-gray-0">프리미엄 멤버십 가입하기</a>
+          </div>
+          <!-- E : 나의 회원 등급 -->
+
+          <div class="my-page-wrap">
+            <!-- S : 마이페이지 좌측 메뉴 -->
+            <div class="my-page-nav">
+              <h4 class="h4"><a href="<?=$nav_mypage_href?>">My page</a></h4>
+              <? include "mypage_nav.html" ?>
+            </div>
+            <!-- E : 마이페이지 좌측 메뉴 -->
+
+            <!-- S : 마이페이지 우측 컨텐츠 -->
+            <div class="my-page-cont">
+              <h5 class="mt-1 mb-5 h5 font-weight-medium">프리미엄 멤버십 신청하기</h5>
+
+              <div class="membership">
+                <div class="order-completed mt-0">
+                  <div class="container">
+                    <h2 class="h2 mb-6">Thank you!</h2>
+                    <h5 class="h5 font-weight-normal">
+                      당신을 변화시킬 <span class="px-1"><img src="../assets/images/main/logo_small.png" alt="RVN" height="18" /></span> 이 지금 출발합니다.
+                    </h5>
+
+                    <div class="order-receipt">
+                      <div class="text-center">
+                        <img src="../assets/images/icon/order_receipt_i.png" alt="체크" />
+                        <h4 class="h4 mt-3">ORDER RECEIPT</h4>
+                      </div>
+                      <div class="order-receipt-info">
+                        <div class="order-receipt-info__tr">
+                          <p class="tt">신청 멤버십</p>
+                          <div class="cont">EXPLORER Lv.3</div>
+                        </div>
+                        <div class="order-receipt-info__tr">
+                          <p class="tt">서비스 내용</p>
+                          <div class="cont">1회 5벌 렌트</div>
+                        </div>
+                        <div class="order-receipt-info__tr">
+                          <p class="tt">결제금액</p>
+                          <div class="cont">￦ 69,000 / 30일 단위 정기 결제</div>
+                        </div>
+                        <div class="order-receipt-info__tr">
+                          <p class="tt">결제수단</p>
+                          <div class="cont">신용카드</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <a href="membership__3.html" class="w-100 btn-type-03 font-14 px-0">프리미엄 멤버십 신청하기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- E : 마이페이지 우측 컨텐츠 -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

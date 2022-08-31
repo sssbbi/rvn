@@ -1,0 +1,82 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "shop";
+    $P_dp2 = "2";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/order.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="order-completed">
+        <div class="container">
+          <div class="order-receipt order-receipt--large">
+            <div class="text-center">
+              <h4 class="h4 font-weight-medium">주문정보</h4>
+            </div>
+            <div class="order-receipt-info">
+              <div class="order-receipt-info__tr">
+                <p class="tt">ITEM PRICE</p>
+                <div class="cont">￦ 1,120,000</div>
+              </div>
+              <div class="order-receipt-info__tr">
+                <p class="tt">SHIPPING PRICE</p>
+                <div class="cont">￦ 0</div>
+              </div>
+              <div class="order-receipt-info__tr">
+                <p class="tt">MILEAGE</p>
+                <div class="cont">- M 500</div>
+              </div>
+              <div class="order-receipt-info__tr mt-8">
+                <p class="tt font-weight-bold text-black">TOTAL PRICE</p>
+                <div class="cont font-weight-bold">￦ 1,359,500</div>
+              </div>
+            </div>
+
+            <h5 class="font-18 pt-6 pb-5 border-top text-left">결제수단</h5>
+            <div class="pay-type">
+              <div class="pay-type__tr align-items-start">
+                <div>
+                  <input type="radio" name="pay_type" id="pay_type1" checked />
+                  <label for="pay_type1">신용카드</label>
+                </div>
+                <a class="link-txt" href="">결제 혜택 확인</a>
+              </div>
+
+              <div class="pay-type__tr">
+                <div>
+                  <input type="radio" name="pay_type" id="pay_type2" />
+                  <label for="pay_type2">실시간 계좌이체</label>
+                </div>
+              </div>
+
+              <div class="pt-5 mt-5 border-top pay-type__tr align-items-start">
+                <div>
+                  <input type="checkbox" name="pay_agree" id="pay_agree" />
+                  <label for="pay_agree">[필수] 주문 상품 및 주문 정보, 결제 동의</label>
+                </div>
+                <a class="link-txt terms-open" href="javascript:void(0);">내용 확인</a>
+              </div>
+              <div class="terms-bx text-left">내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력</div>
+            </div>
+
+            <div class="text-center mt-15">
+              <a href="order_completed.html" class="w-49 btn-type-03 font-14 px-0">결제하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script>
+      $('.terms-open').on('click', function () {
+        $(this).parent().next('.terms-bx').stop().slideToggle(250);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    $P_dp2 = "10";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body mypage">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="my-page">
+        <!-- S : 마이페이지 메뉴 -->
+        <? include "mypage_nav.html" ?>
+        <!-- E : 마이페이지 메뉴 -->
+
+        <!-- S : 나의 회원 등급 -->
+        <? include "my_level.html" ?>
+        <!-- E : 나의 회원 등급 -->
+
+        <div class="container pt-6">
+          <div class="p-3 text-center border border-black mb-2">
+            <p class="common-text--sm font-weight-medium">보유한 총 마일리지 : <span class="text-primary font-weight-semibold">1900</span></p>
+          </div>
+
+          <div class="p-4 border border-gray-c">
+            <p class="common-text--sm font-weight-medium d-flex align-items-center mb-3"><img src="../assets/images/icon/information.svg" width="16" class="mr-1" alt="info" /> 마일리지 안내</p>
+
+            <ul class="bullet-list bullet-list--txt common-text--xxs text-gray-5" style="line-height: 1.4">
+              <li class="item" data-bullet="·">마일리지는 회원 등급과 상관 없이 결제 금액의 1%가 '반납완료' 시점에 자동 적립 됩니다.</li>
+              <li class="item mt-2" data-bullet="·">
+                대여 상품에 대한 리뷰 작성 시 리뷰 형태에 따라 마일리지가 차등 적립 됩니다.<br />
+                (텍스트 리뷰 : 500Mil / 포토리뷰 1,000Mil / SNS 리뷰 2,000M)
+              </li>
+              <li class="item mt-2" data-bullet="·">적립된 마일리지는 '일반 대여 시' 에만 제한 없이 사용 가능합니다.</li>
+              <li class="item mt-2" data-bullet="·">적립된 마일리지는 적립일 기준 1년 후 자동 소멸 됩니다.</li>
+            </ul>
+          </div>
+
+          <table class="table table--qna mt-5">
+            <colgroup>
+              <col width="*" />
+              <col width="21%" />
+              <col width="21%" />
+              <col width="21%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="common-text--xxs">내용</th>
+                <th class="common-text--xxs">적립/사용</th>
+                <th class="common-text--xxs">포인트</th>
+                <th class="common-text--xxs">적용일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>구매적립</td>
+                <td>사용</td>
+                <td class="font-weight-bold text-black">- 500</td>
+                <td>2021.01.01</td>
+              </tr>
+              <tr>
+                <td>텍스트리뷰</td>
+                <td>적립</td>
+                <td class="font-weight-bold text-black">+ 500</td>
+                <td>2021.01.01</td>
+              </tr>
+              <tr>
+                <td>포토리뷰</td>
+                <td>적립</td>
+                <td class="font-weight-bold text-black">+ 1000</td>
+                <td>2021.01.01</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- S : paging -->
+          <div class="paging-area">
+            <ul class="text-center">
+              <li>
+                <a href="javascript:;" class="prev"><span>이전으로</span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="active">1<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;">2<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;">3<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="next"><span>다음으로</span></a>
+              </li>
+            </ul>
+          </div>
+          <!-- E : paging -->
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.login-wrap {
+  margin-top: 70px;
+  .h4 {
+    line-height: 1.3;
+    margin-bottom: -2px;
+  }
+
+  .login-list {
+    width: 580px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    margin-top: 40px;
+    border: 1px solid $gray-d;
+    li {
+      font-size: 14px;
+      position: relative;
+    }
+
+    li + li {
+      margin-top: 30px;
+    }
+    .tit {
+      margin-bottom: 5px;
+    }
+    @at-root .my-page-cont .login-list .tit {
+      font-weight: 500;
+    }
+    .find-link {
+      display: inline-block;
+    }
+    .find-link + .find-link {
+      margin-left: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -11px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 13px;
+        background: $gray-c;
+        margin-top: -1px;
+      }
+    }
+    .btn-bx {
+      margin-top: 40px;
+      margin-left: -5px;
+      margin-right: -5px;
+      .col-6 {
+        padding: 0 5px;
+      }
+    }
+
+    #save_id_tooltip {
+      display: none;
+      margin-top: 0;
+      &.active {
+        display: block;
+      }
+      div {
+        display: inline-block;
+        border: 1px solid $gray-e;
+        padding: 9px 15px;
+        background: $white;
+        margin-top: 15px;
+        margin-left: -10px;
+        position: relative;
+        border-radius: 5px;
+        &::before {
+          content: '';
+          width: 9px;
+          height: 9px;
+          border: 1px solid $gray-d;
+          border-right: 0;
+          border-bottom: 0;
+          transform: rotate(45deg);
+          position: absolute;
+          left: 14px;
+          top: -6px;
+          background: $white;
+        }
+      }
+    }
+  }
+}
+
+.terms-chk {
+  text-align: left;
+  border: 1px solid $gray-e;
+  padding: 0 20px;
+  font-size: 14px;
+  color: $gray-5;
+  &__head {
+    padding: 20px 0;
+    color: $black;
+    position: relative;
+    .icon {
+      cursor: pointer;
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__body {
+    //display: none;
+    padding: 20px 0;
+    padding-left: 10px;
+    border-top: 1px solid $gray-e;
+
+    .terms-txt {
+      display: none;
+      max-height: 100px;
+      overflow-y: auto;
+      padding: 10px;
+      font-size: 13px;
+      color: $gray-5;
+      border: 1px solid $gray-e;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+  }
+}

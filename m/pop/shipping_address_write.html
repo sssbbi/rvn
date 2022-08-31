@@ -1,0 +1,72 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html class="pop-html" lang="ko">
+  <head>
+    <? $P_dp0 = "main";
+    include "../include/meta.html" ?>
+  </head>
+  <body>
+    <main class="main">
+
+      <div class="pop-wrap shipping-address-pop">
+        <div class="pop-header d-flex justify-content-between align-items-center">
+          <!-- 수정일땐 '배송지 수정' -->
+          <h5 class="sub-main-title font-weight-medium">배송지 신규등록</h5>
+        </div>
+      
+        <div class="pop-body">
+          <table class="table table--shipping __responsive common-text--xxs">
+            <colgroup>
+              <col class="col-w-1" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>받는분</th>
+                <td>
+                  <input type="text" name="uname" id="uname" class="w-100" value="" />
+                </td>
+              </tr>
+              <tr>
+                <th>연락처</th>
+                <td>
+                  <input type="tel" name="uptel" id="uptel" class="w-100" value="" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" />
+                </td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <div class="row no-gutters">
+                    <div class="col pr-1">
+                      <input type="text" class="w-100" name="" id="" readonly />
+                    </div>
+                    <div class="col-auto">
+                      <a href="" class="btn-type-03 px-5">주소찾기</a>
+                    </div>
+                    <div class="col-12 mt-1">
+                      <input type="text" class="w-100" name="" id="" readonly />
+                    </div>
+                    <div class="col-12 mt-1">
+                      <input type="text" class="w-100" name="" id="" placeholder="상세 주소를 입력해주세요." />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pop-footer">
+          <div class="btn-bx">
+            <a href="javascript:history.go(-1)" class="btn btn-type-04">이전</a>
+            <input type="submit" class="btn btn-type-03" value="등록">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <? include "../include/js.html" ?>
+</body>
+</html>

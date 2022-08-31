@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.email-reject {
+  border: 3px solid $gray-d;
+  text-align: center;
+  padding: em(30) em(20);
+  font-size: em(20);
+  line-height: 1.5;
+  margin-bottom: em(60);
+  @include mdq-max(md) {
+    margin-bottom: em(30);
+    padding: em(20) em(15);
+  }
+}
+
+.policy-txt {
+  line-height: 1.7;
+  color: $gray-6;
+  .tit {
+    font-weight: 500;
+    color: $gray-2;
+    margin-bottom: 5px;
+    font-size: em(18);
+  }
+}

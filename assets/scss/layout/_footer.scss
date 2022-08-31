@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.footer {
+  background: #f5f5f5;
+  padding: 50px 0;
+  .footer-link {
+    &__list {
+      overflow: hidden;
+      margin: 0 -10px;
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        //font-family: $font-family-sub;
+        //font-weight: 300;
+        font-size: 14px;
+      }
+      &--left {
+        li + li {
+          position: relative;
+          &::before {
+            content: '';
+            width: 1px;
+            height: 13px;
+            background: $gray-c;
+            position: absolute;
+            left: -2px;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+  .footer-cs {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    .cs {
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .tel {
+        font-size: 22px;
+        font-weight: 600;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .sns {
+      font-size: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .footer-address {
+    .site-name {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .address {
+      font-style: normal;
+      font-family: $font-family-sub;
+      font-size: 12px;
+      //font-weight: 300;
+      color: $gray-5;
+      display: flex;
+      flex-wrap: wrap;
+      margin: -2px -10px;
+      overflow: hidden;
+      span {
+        padding: 2px 10px;
+        line-height: 15px;
+      }
+      .copyright {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .noti-text {
+    color: $gray-9;
+    font-size: 12px;
+  }
+
+  // .go-top {
+  //   position: absolute;
+  //   right: -100px;
+  //   top: -115px;
+  //   width: 48px;
+  //   height: 48px;
+  //   line-height: 48px;
+  //   border-radius: 100%;
+  //   background: rgba($black, 0.3);
+  //   color: $white;
+  //   font-size: 20px;
+  //   @media all and (max-width: 1460px) {
+  //     right: 15px;
+  //   }
+  // }
+
+  .go-top {
+    position: fixed;
+    left: 50%;
+    //bottom: 30px;
+    bottom: -48px;
+    margin-left: 650px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 100%;
+    background: rgba($black, 0.3);
+    color: $white;
+    font-size: 20px;
+    z-index: 10;
+    transition: bottom 0.3s;
+    @media all and (max-width: 1460px) {
+      left: auto;
+      right: 15px;
+      margin-left: 0;
+    }
+
+    &.show {
+      bottom: 30px;
+    }
+    &.abs {
+      position: absolute;
+      bottom: auto;
+      top: -128px;
+    }
+  }
+}

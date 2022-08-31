@@ -1,0 +1,349 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "shop";
+    $P_dp2 = "2";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+    <link rel="stylesheet" href="../assets/css/order.min.css" />
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item">Shopping bag</li>
+          <li class="breadcrumb__item">Order</li>
+        </ul>
+      </div>
+
+      <section class="shopping-bag-page">
+        <div class="container">
+          <h4 class="h4 mb-5">CHECK OUT YOUR ORDER INFORMATION</h4>
+
+          <!-- S : 좌측 영역 -->
+          <div class="shopping-bag-list shopping-bag-list--order">
+            <!-- S : 주문자 정보 -->
+            <div class="order-person d-flex justify-content-between">
+              <h5 class="h5">주문자</h5>
+              <p class="font-weight-medium">홍길동 <span class="phone">010-2345-6789</span></p>
+            </div>
+            <!-- E : 주문자 정보 -->
+
+            <div class="shipping-info">
+              <div class="shipping-info__bx">
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="h5">배송지</h5>
+                  <div class="font-15">
+                    <input type="checkbox" name="shipping_copy" id="shipping_copy" checked />
+                    <label for="shipping_copy">반납지 정보 동일</label>
+                  </div>
+                </div>
+
+                <div class="shipping-table">
+                  <table class="table table--shipping">
+                    <colgroup>
+                      <col class="col-w-1" />
+                      <col width="*" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>받는분</th>
+                        <td>
+                          홍길동
+                          <span class="btn-type-01 btn-type-01--xsmall pl-2 pr-2">최근 배송지</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>연락처</th>
+                        <td>010-2345-6789</td>
+                      </tr>
+                      <tr>
+                        <th>주소</th>
+                        <td>
+                          <div>
+                            서울시 마포구 양화로 11길 42, 팍스타 601호
+                            <button type="button" class="ml-2 btn-type-03 btn-type-03--xsmall" onclick="window.open('../pop/shipping_address.html', 'PopupWin', 'width=680, height=875');">변경</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- S : 최초 결제 일때 -->
+                      <tr>
+                        <th>받는분</th>
+                        <td>
+                          <input type="text" name="uname" id="uname" class="w-100" value="홍길동" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>연락처</th>
+                        <td>
+                          <input type="tel" name="uptel" id="uptel" class="w-100" value="01012345678" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="pb-0">주소</th>
+                        <td class="pb-0">
+                          <div class="d-flex">
+                            <div class="w-25 pr-1">
+                              <input type="text" class="w-100" name="" id="" readonly />
+                            </div>
+                            <div class="w-55 pr-1">
+                              <input type="text" class="w-100" name="" id="" readonly />
+                            </div>
+                            <div class="w-20">
+                              <a href="" class="btn-type-03 w-100 font-14">주소찾기</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th></th>
+                        <td>
+                          <input type="text" class="w-100" name="" id="" placeholder="상세 주소를 입력해주세요." />
+                        </td>
+                      </tr>
+                      <!-- E : 최초 결제 일때 -->
+                      <tr>
+                        <th></th>
+                        <td>
+                          <select name="" id="" class="w-100">
+                            <option value="">배송 요청사항을 선택해주세요.</option>
+                          </select>
+                          <div class="mt-1">
+                            <textarea name="" id="" cols="30" rows="10" class="w-100" placeholder="배송 요청사항을 선택해주세요."></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="shipping-info__bx pt-6 pb-6 border-top border-bottom">
+              <h5 class="h5 mb-3">반납지</h5>
+              <div class="shipping-table">
+                <table class="table table--shipping">
+                  <colgroup>
+                    <col class="col-w-1" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>보내는분</th>
+                      <td>
+                        <input type="text" class="w-100" name="" id="" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>연락처</th>
+                      <td>
+                        <input type="tel" class="w-100" name="" id="" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="pb-0">주소</th>
+                      <td class="pb-0">
+                        <div class="d-flex">
+                          <div class="w-25 pr-1">
+                            <input type="text" class="w-100" name="" id="" readonly />
+                          </div>
+                          <div class="w-55 pr-1">
+                            <input type="text" class="w-100" name="" id="" readonly />
+                          </div>
+                          <div class="w-20">
+                            <a href="" class="btn-type-03 w-100 font-14">주소찾기</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td>
+                        <div>
+                          <input type="text" class="w-100" name="" id="" placeholder="상세 주소를 입력해주세요." />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- S : 주문상품 영역 -->
+            <h5 class="h5 pt-6 pb-5">주문상품</h5>
+            <div class="product-list product-list--type2">
+              <div class="product-list__item product-list__item--type3">
+                <div class="inner">
+                  <a href="../product/view.html" class="img-bx">
+                    <span class="img-size">
+                      <img src="../images/board/product_img.jpg" alt="상품 이미지" />
+                    </span>
+                  </a>
+                  <div class="txt-bx">
+                    <p class="brand-name">BRAND NAME</p>
+                    <p class="product-name">PRODUCT NAME</p>
+                    <p class="price">
+                      RENTAL PRICE
+                      <span class="pl-3 sale-price">￦ 39,000</span>
+                      <span class="pl-1 ori-price font-weight-normal">￦ 150,000</span>
+                    </p>
+
+                    <div class="now-status">Size : L</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-list__item product-list__item--type3">
+                <div class="inner">
+                  <a href="../product/view.html" class="img-bx">
+                    <span class="img-size">
+                      <img src="../images/board/product_img.jpg" alt="상품 이미지" />
+                    </span>
+                  </a>
+                  <div class="txt-bx">
+                    <p class="brand-name">BRAND NAME</p>
+                    <p class="product-name">PRODUCT NAME</p>
+                    <p class="price">
+                      RENTAL PRICE
+                      <span class="pl-3 sale-price">￦ 39,000</span>
+                      <span class="pl-1 ori-price font-weight-normal">￦ 150,000</span>
+                    </p>
+
+                    <div class="now-status">Size : L</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- E : 주문상품 영역 -->
+
+            <!-- S : 결제수단 영역 -->
+            <h5 class="h5 pt-6 pb-5">결제수단</h5>
+            <div class="pay-type">
+              <div class="pay-type__tr">
+                <div>
+                  <input type="radio" name="pay_type" id="pay_type1" checked />
+                  <label for="pay_type1">신용카드</label>
+                </div>
+                <a class="link-txt" href="">결제 혜택 확인</a>
+              </div>
+
+              <div class="pay-type__tr">
+                <div>
+                  <input type="radio" name="pay_type" id="pay_type2" />
+                  <label for="pay_type2">실시간 계좌이체</label>
+                </div>
+              </div>
+
+              <div class="pt-4 border-top pay-type__tr">
+                <div>
+                  <input type="checkbox" name="pay_agree" id="pay_agree" />
+                  <label for="pay_agree">[필수] 주문 상품 및 주문 정보, 결제 동의</label>
+                </div>
+                <a class="link-txt terms-open" href="javascript:void(0);">내용 확인</a>
+              </div>
+              <div class="terms-bx">내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력 내용 입력</div>
+            </div>
+            <!-- E : 결제수단 영역 -->
+          </div>
+          <!-- E : 좌측 영역 -->
+
+          <!-- S : 우측 가격 정보 영역 -->
+          <div class="shopping-bag-price">
+            <div class="price-info">
+              <div class="price-info__tr">
+                <p class="tt">ITEM PRICE</p>
+                <p class="price">￦ 1,120,000</p>
+              </div>
+
+              <!-- S : 프리미엄 회원일때만 노출 -->
+              <div class="price-info__tr">
+                <p class="tt">PREMIUM MEMBERSHIP PRICE</p>
+                <p class="price">￦ 120,000</p>
+              </div>
+              <!-- E : 프리미엄 회원일때만 노출 -->
+
+              <div class="price-info__tr">
+                <p class="tt">SHIPPING PRICE</p>
+                <p class="price">￦ 0</p>
+              </div>
+              <div class="price-info__tr price-info__tr--total mt-10">
+                <p class="tt">TOTAL PRICE</p>
+                <p class="price text-gray-0">￦ 1,240,000</p>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input type="button" value="￦ 1,240,000 에 지금 바로 경험하기" class="w-100 btn-type-03" onclick="location.href='order_completed.html'" />
+            </div>
+            <div class="mt-1 text-center">
+              <div class="bg-gray w-100 font-weight-bold pt-7 pb-7">YOU SAVE <span class="text-primary">￦ 68,000</span></div>
+            </div>
+          </div>
+          <!-- E : 우측 가격 정보 영역 -->
+        </div>
+      </section>
+
+      <!-- S : 장바구니에 담긴 상품이 없을때 -->
+      <!-- <section class="member">
+        <div class="container">
+          <div class="login-wrap mt-5">
+            <h4 class="h4 text-center">CHECK OUT YOUR SHOPPING BAG</h4>
+
+            <div class="login-list">
+              <div class="text-center">
+                <img src="../assets/images/icon/shopping_bag_i_empty.png" alt="쇼핑백 비어있음" />
+                <p class="mt-5">아직 쇼핑백에 담긴 상품이 없습니다.</p>
+                <p class="mt-2">마음에 드는 상품을 담고 RVN의 특별한 경험을 만나보세요!</p>
+              </div>
+
+              <div class="mt-10">
+                <input type="button" class="btn-type-03 w-100" value="RVN 의 경험 만나러 가기" onclick="location.href='../product/list.html'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- E : 장바구니에 담긴 상품이 없을때 -->
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script>
+      function cartScroll_front() {
+        var scrTop = $(window).scrollTop() + $('.header').outerHeight(),
+          scrBtm = $(window).scrollTop() + $(window).height(),
+          cartTop = $('.shopping-bag-list').offset().top - 20,
+          cartWrapBtm = $('.shopping-bag-list').offset().top + $('.shopping-bag-page').outerHeight();
+
+        //console.log(scrTop); // 1045
+        //console.log($(window).height() - $('.footer').outerHeight() + 137 ); // 1630
+
+        if (scrTop > cartTop) {
+          $('.shopping-bag-price').addClass('fix');
+          if (scrBtm < cartWrapBtm + $('.header').outerHeight() + 110) {
+            $('.shopping-bag-price').addClass('fix');
+          } else {
+            $('.shopping-bag-price').removeClass('fix').addClass('btm');
+          }
+        } else {
+          $('.shopping-bag-price').removeClass('fix btm');
+        }
+      }
+
+      $(document).ready(function () {
+        cartScroll_front();
+      });
+      $(window).on('scroll', function () {
+        cartScroll_front();
+      });
+
+      $('.terms-open').on('click', function () {
+        $(this).parent().next('.terms-bx').stop().slideToggle(250);
+      });
+    </script>
+  </body>
+</html>

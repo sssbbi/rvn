@@ -1,0 +1,129 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html class="pop-html" lang="ko">
+  <head>
+    <? $P_dp0 = "main";
+    include "../include/meta.html" ?>
+  </head>
+  <body>
+    <main class="main">
+
+      <div class="shipping-address-pop pop-wrap">
+        <div class="pop-header d-flex justify-content-between align-items-center">
+          <h5 class="sub-main-title font-weight-medium">배송지 변경</h5>
+          <a href="shipping_address_write.html" class="btn-type-03 btn-type-03--small">신규등록</a>
+        </div>
+      
+        <div class="pop-body">
+          <div class="shipping-list">
+            <div class="shipping-list__item">
+              <div class="chk-bx">
+                <input type="radio" name="shipping_list" id="shipping_list1" />
+                <label for="shipping_list1"></label>
+              </div>
+              <div class="address-bx">
+                <div class="font-weight-medium text-gray-0">홍길동</div>
+                <div class="my-3">서울시 서초구 신반포로 339, 1층</div>
+                <div>010-1234-5678</div>
+
+                <div class="address-bx__btn">
+                  <a href="shipping_address_write.html">수정</a>
+                  <a href="">삭제</a>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-list__item">
+              <div class="chk-bx">
+                <input type="radio" name="shipping_list" id="shipping_list2" />
+                <label for="shipping_list2"></label>
+              </div>
+              <div class="address-bx">
+                <div class="font-weight-medium text-gray-0">홍길동</div>
+                <div class="my-3">서울시 서초구 신반포로 339, 1층</div>
+                <div>010-1234-5678</div>
+
+                <div class="address-bx__btn">
+                  <a href="shipping_address_write.html">수정</a>
+                  <a href="">삭제</a>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-list__item">
+              <div class="chk-bx">
+                <input type="radio" name="shipping_list" id="shipping_list3" />
+                <label for="shipping_list3"></label>
+              </div>
+              <div class="address-bx">
+                <div class="font-weight-medium text-gray-0">홍길동</div>
+                <div class="my-3">서울시 서초구 신반포로 339, 1층</div>
+                <div>010-1234-5678</div>
+
+                <div class="address-bx__btn">
+                  <a href="shipping_address_write.html">수정</a>
+                  <a href="">삭제</a>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-list__item">
+              <div class="chk-bx">
+                <input type="radio" name="shipping_list" id="shipping_list4" />
+                <label for="shipping_list4"></label>
+              </div>
+              <div class="address-bx">
+                <div class="font-weight-medium text-gray-0">홍길동</div>
+                <div class="my-3">서울시 서초구 신반포로 339, 1층</div>
+                <div>010-1234-5678</div>
+
+                <div class="address-bx__btn">
+                  <a href="shipping_address_write.html">수정</a>
+                  <a href="">삭제</a>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-list__item">
+              <div class="chk-bx">
+                <input type="radio" name="shipping_list" id="shipping_list5" />
+                <label for="shipping_list5"></label>
+              </div>
+              <div class="address-bx">
+                <div class="font-weight-medium text-gray-0">홍길동</div>
+                <div class="my-3">서울시 서초구 신반포로 339, 1층</div>
+                <div>010-1234-5678</div>
+
+                <div class="address-bx__btn">
+                  <a href="shipping_address_write.html">수정</a>
+                  <a href="">삭제</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="paging-area mt-7 mb-7">
+            <ul class="text-center">
+              <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+              <li><a href="javascript:;" class="active">1<span></span></a></li>
+              <li><a href="javascript:;">2<span></span></a></li>
+              <li><a href="javascript:;">3<span></span></a></li>
+              <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+            </ul>
+          </div>
+
+          <div class="border-bottom pb-3 font-14">
+            <input type="checkbox" name="default_address" id="default_address">
+            <label for="default_address">기본 배송지로 선택</label>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="btn-bx">
+            <button type="button" class="btn btn-type-04" onclick="window.close();">취소</button>
+            <button type="button" class="btn btn-type-03">선택</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <? include "../include/js.html" ?>
+</body>
+</html>

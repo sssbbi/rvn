@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.breadcrumb {
+  overflow: hidden;
+  margin: 0 -13px;
+  padding: 20px 0;
+  &__item {
+    display: inline-block;
+    padding: 0 13px;
+    position: relative;
+    font-size: 14px;
+  }
+  &__item + &__item::before {
+    content: '\e93f';
+    font-family: 'xeicon' !important;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    color: $gray-c;
+  }
+}

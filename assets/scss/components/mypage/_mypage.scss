@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+.my-level {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: $gray-e;
+  padding: 30px 30px 28px;
+  font-size: 15px;
+  color: $gray-5;
+  margin-bottom: 40px;
+
+  &__info {
+    .name {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .level {
+      font-size: 16px;
+    }
+  }
+  &__link {
+    border-bottom: 1px solid $black;
+    font-weight: 500;
+    padding-bottom: 2px;
+  }
+}
+
+.my-page-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+
+  .my-page-nav {
+    flex: 0 0 174px;
+    max-width: 174px;
+
+    &.btm {
+      position: absolute;
+      left: 50%;
+      margin-left: -597px;
+      top: inherit;
+      bottom: 0;
+    }
+    &.fix {
+      position: fixed;
+      left: 50%;
+      top: 157px;
+      margin-left: -597px;
+      z-index: 99;
+    }
+  }
+
+  .my-page-cont {
+    flex: 1 0 1020px;
+    max-width: 1020px;
+    padding-left: 30px;
+  }
+
+  // 마이페이지 네비
+  .mypage-nav {
+    &-list {
+      padding: 15px 0;
+      &__item {
+        margin: 15px 0;
+        a {
+          &.on {
+            color: $primary;
+          }
+        }
+      }
+    }
+    .mypage-nav-list + .mypage-nav-list {
+      border-top: 1px solid $gray-d;
+    }
+  }
+}
+
+// 나의 RVN
+.my-rvn {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 1;
+    > a {
+      display: block;
+      padding: 30px 10px;
+      text-align: center;
+      border: 1px solid $gray-d;
+      margin-left: -1px;
+      &.new .icon::after {
+        content: 'N';
+        display: block;
+        width: 19px;
+        height: 19px;
+        line-height: 20px;
+        text-align: center;
+        background: $danger;
+        color: $white;
+        border-radius: 100%;
+        position: absolute;
+        right: -15px;
+        top: -10px;
+        font-size: 10px;
+      }
+    }
+    .icon {
+      position: relative;
+      display: inline-block;
+    }
+    .tt {
+      margin: 15px 0 5px;
+    }
+    .number {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+.rent-list {
+  //background: #f6f6f6;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 1 0 20%;
+    max-width: 20%;
+    text-align: center;
+    .number {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  }
+  .rent-list__item + .rent-list__item {
+    border-left: 1px solid $gray-e;
+  }
+}
+
+.recently-bx {
+  padding: 26px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  &__txt {
+    display: inline-block;
+    font-weight: 700;
+  }
+  .recently-bx__txt + .recently-bx__txt {
+    padding-left: 15px;
+    margin-left: 15px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 13px;
+      background: $gray-c;
+      position: absolute;
+      left: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.myp-product + .myp-product {
+  margin-top: 40px;
+}
+
+.order-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 0;
+  border-top: 1px solid $gray-d;
+  border-bottom: 1px solid $gray-d;
+  margin-bottom: 40px;
+  &-period {
+    display: flex;
+    &__link {
+      display: block;
+      width: 60px;
+      line-height: 37px;
+      text-align: center;
+      border: 1px solid $gray-d;
+      color: $gray-5;
+      margin-left: -1px;
+      &:hover {
+        position: relative;
+        z-index: 1;
+        border-color: $primary;
+      }
+      &.on {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+  &-calendar {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: $gray-5;
+    .input-date {
+      height: 39px;
+      width: 135px;
+      padding: 0 10px;
+      background: url(../images/icon/calendar_i.png) no-repeat right 10px center;
+    }
+  }
+  &-btn {
+    font-size: 14px;
+    height: 39px;
+    width: 100px;
+  }
+}
+
+.order-detail-shipping {
+  padding: 20px 0 10px;
+  border-bottom: 1px solid $gray-d;
+}
+
+// 리뷰 관리
+.ordered-list {
+  border-top: 1px solid $gray-d;
+  &__tr {
+    border-bottom: 1px solid $gray-d;
+  }
+}
+
+// 최근 본 상품
+.recently-product {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  &-date {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &-tr {
+    margin-top: 40px;
+  }
+  &-item {
+    margin: 20px 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 35px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: $secondary;
+    }
+  }
+  &__category {
+    display: inline-block;
+    background: $secondary;
+    color: $white;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 0 16px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+}
+
+// 나의 멤버십
+.membership {
+  text-align: center;
+  &-title {
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .txt {
+      margin-top: 10px;
+    }
+  }
+
+  &-lv {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+      flex: 1 0 25%;
+      max-width: 25%;
+      .border-bx {
+        display: block;
+        border: 1px solid $gray-d;
+        padding: 30px;
+        text-align: center;
+        height: 100%;
+        margin-left: -1px;
+        position: relative;
+        cursor: default;
+        &::before {
+          //content:'';
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          right: -1px;
+          bottom: -1px;
+          z-index: 1;
+          border: 1px solid $black;
+        }
+        &::after {
+          //content:'';
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          z-index: 1;
+          width: 56px;
+          height: 32px;
+          line-height: 33px;
+          display: block;
+          background: $black;
+          color: $white;
+          font-size: 11px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        &--click {
+          cursor: pointer;
+        }
+        &.__ing {
+          &::before {
+            content: '';
+          }
+          &::after {
+            content: '이용중';
+          }
+        }
+        &.__selected {
+          &::before {
+            content: '';
+            border-color: $primary;
+          }
+          &::after {
+            content: '선택';
+            background: $primary;
+          }
+        }
+      }
+      .lv-name {
+        font-size: 18px;
+        margin: 15px 0 10px;
+      }
+      .lv {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .desc {
+        margin: 30px 0;
+        font-size: 14px;
+        font-family: $font-family-sub;
+        .price {
+          font-size: 18px;
+          margin: 12px 0;
+          font-weight: 700;
+          font-family: $font-family-main;
+        }
+      }
+      .save-price {
+        line-height: 50px;
+        background: #e3e2e0;
+        color: $gray-5;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &-completed {
+    padding: 40px 0;
+    border: 1px solid $gray-d;
+    .txt {
+      line-height: 1.5;
+      margin: 20px 0 30px;
+    }
+  }
+}

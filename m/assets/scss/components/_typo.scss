@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.sub-main-title {
+  font-size: 18px;
+}
+
+.common-title {
+  font-size: 20px;
+  &--md {
+    font-size: 18px;
+  }
+}
+
+.common-text {
+  font-size: 16px !important;
+  line-height: 1.3;
+  &--md {
+    font-size: 15px !important;
+    line-height: 1.3;
+  }
+  &--sm {
+    font-size: 14px !important;
+    line-height: 1.3;
+  }
+  &--xs {
+    font-size: 13px !important;
+    line-height: 1.3;
+  }
+  &--xxs {
+    font-size: 12px !important;
+    line-height: 1.3;
+  }
+  &--xxxs {
+    font-size: 11px !important;
+    line-height: 1.3;
+  }
+  &--xxxxs {
+    font-size: 10px !important;
+    line-height: 1.3;
+  }
+}

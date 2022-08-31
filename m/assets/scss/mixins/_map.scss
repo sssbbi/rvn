@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@mixin map-kakao($height, $name, $border, $control:false) {
+  //content: '';
+  position: relative;
+  //display: block;
+  padding-bottom: $height;
+
+  .root_daum_roughmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    border:none;
+
+    @if ( $control == false ){
+      .wrap_map {
+        width: 100%;
+        height: 100% !important;
+      }
+
+      .wrap_controllers {
+        display: none;
+      }
+    } @else {
+      .wrap_map {
+        width: 100%;
+        height: calc(100% - 30px) !important;
+      }
+    }
+
+    @if ( $name == false ){
+      .roughmap_maker_label {
+        display:none !important;   
+      }
+    }
+
+    @if ( $border == false ){
+      .map_border {
+        display:none !important;
+      }
+    } @else {
+      .map_border.border2 {
+        display: block !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.quick {
+  position: fixed;
+  right: 15px;
+  bottom: em(30);
+  z-index: 10;
+  .go-top {
+    display: block;
+    background: $gray-1;
+    border-radius: 100%;
+    font-size: em(17);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: $white;
+    text-align: center;
+  }
+}

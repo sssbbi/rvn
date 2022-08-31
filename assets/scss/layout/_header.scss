@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  padding: 40px 0 0;
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .logo {
+    //margin-bottom: 20px;
+    a {
+      //display: block;
+    }
+  }
+
+  .util {
+    position: absolute;
+    right: 15px;
+    bottom: -40px;
+    display: flex;
+    li {
+      margin-left: 20px;
+      a {
+        display: block;
+      }
+    }
+    .cart {
+      padding-right: 9px;
+      position: relative;
+      .count {
+        width: 16px;
+        height: 16px;
+        background: $black;
+        border-radius: 100%;
+        line-height: 16px;
+        color: $white;
+        font-size: 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .header-search {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    background: $white;
+    border-top: 1px solid $gray-e;
+    border-bottom: 1px solid $gray-e;
+    z-index: 2;
+    padding: 30px 0;
+    .inner {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    &__inp {
+      position: relative;
+      margin-bottom: 15px;
+      .search-input {
+        border: 0;
+        border-bottom: 2px solid $gray-d;
+        padding: 0;
+        height: 60px;
+        font-size: 18px;
+        // &:active {
+        //   border-color: $secondary;
+        // }
+      }
+      .search-btn {
+        width: 60px;
+        height: 60px;
+        background: url(../images/icon/header_util_i1.svg) no-repeat center right;
+        background-size: 32px;
+        border: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 0;
+        text-indent: -9999px;
+      }
+    }
+    &__terms {
+      margin: -5px -10px;
+      overflow: hidden;
+      a {
+        color: $gray-5;
+        font-size: 14px;
+        display: inline-block;
+        margin: 5px 10px;
+      }
+    }
+  }
+
+  &.fix {
+    //box-shadow: 0 5px 10px rgba($black, 0.1);
+  }
+  + main {
+    padding-top: 137px;
+  }
+}

@@ -1,0 +1,825 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp0 = "product";
+     include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/product.min.css" />
+    <title>Clothing | <?=$SS[sitename]?></title>
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item"><a href="">Clothing</a></li>
+          <li class="breadcrumb__item"><a href="">Dress</a></li>
+          <li class="breadcrumb__item"><a href="">Long Dress</a></li>
+        </ul>
+      </div>
+
+      <section class="product-view-page">
+        <div class="container">
+          <!-- S : 우측 고정 상품 정보 -->
+          <div class="product-info">
+            <h4 class="h4 product-name">PRODUCT NAME 제품명</h4>
+            <ul class="keyword">
+              <li>#Daily</li>
+              <li>#Officelook</li>
+              <li>#Weekend</li>
+            </ul>
+            <p class="product-description scrollSt">제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개 제품 간략 소개</p>
+
+            <div class="product-option">
+              <div class="product-option__tr">
+                <p class="tit">PRICE</p>
+                <p class="price">￦ 120,000</p>
+              </div>
+              <div class="product-option__tr">
+                <p class="tit">DATE</p>
+                <p class="txt">2020 . 11 . 10 부터 렌트 가능</p>
+              </div>
+              <div class="product-option__tr">
+                <p class="tit">SIZE</p>
+                <div class="txt">
+                  <select name="" id="">
+                    <option value="">옵션 선택</option>
+                  </select>
+                </div>
+              </div>
+              <div class="product-option__tr product-option__tr--color">
+                <p class="tit">OTHER COLOR</p>
+
+                <div class="other-product other-product--color">
+                  <div class="slick">
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                    <div class="other-product__item">
+                      <a class="img-size" href="">
+                        <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-bx">
+              <div class="cart">
+                <button type="button" class="btn cart-btn" title="장바구니 담기" data-toggle="modal" data-target="#cart_check"/>
+                  <img src="../assets/images/icon/cart.svg" alt="카트">
+                </button>
+              </div>
+              <div class="order">
+                <input type="button" class="btn order-btn" value="￦ 120,000 에 경험하기" title="경험하기" data-toggle="modal" data-target="#experience_product"/>
+              </div>
+            </div>
+
+            <div class="text-right mt-7">
+              <a class="link-txt font-weight-bold text-primary" href="javascript:void(0);" data-toggle="modal" data-target="#checkLogin" >RVN PREMIUM MEMBERSHIP</a>
+            </div>
+          </div>
+          <!-- E : 우측 고정 상품 정보 -->
+
+          <!-- S : 이미지 슬라이드 -->
+          <div class="product-img">
+            <!-- S : 큰 이미지 (사이즈 : 684x1026) -->
+            <div class="img">
+              <div class="item img-size img-zoom">
+                <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size img-zoom">
+                <img src="../assets/images/main/main_banner_1.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size img-zoom">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size img-zoom">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size img-zoom">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+            </div>
+            <!-- E : 큰 이미지 (사이즈 : 684x1026) -->
+
+            <!-- S : 썸네일 이미지 -->
+            <div class="thumb-img">
+              <div class="item img-size">
+                <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+              <div class="item img-size">
+                <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+              </div>
+            </div>
+            <!-- E : 썸네일 이미지 -->
+          </div>
+          <!-- E : 이미지 슬라이드 -->
+
+          <!-- S : 코디 아이템 -->
+          <p class="font-14 font-weight-bold">COORDI ITEM</p>
+          <div class="other-product other-product--coordi">
+            <div class="slick">
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- E : 코디 아이템 -->
+
+          <div class="tab-area scroll-function">
+            <ul class="tab tab--st1" data-track-nav="scrTrack">
+              <li><a class="on" href="#tab_detail">DETAIL</a></li>
+              <li><a href="#tab_size">SIZE</a></li>
+              <li><a href="#tab_review">REVIEW (16)</a></li>
+              <li><a href="#tab_qna">Q&amp;A (5)</a></li>
+              <li><a href="#tab_guide">GUIDE</a></li>
+            </ul>
+          </div>
+
+          <div data-track="scrTrack">
+            <div id="tab_detail" class="tab-content pb-25">
+              <div class="pt-10">
+                detail text<br>
+                detail text<br>
+                detail text<br>
+                detail text<br>
+                detail text
+              </div>
+            </div>
+            <div id="tab_size" class="tab-content pb-25">
+              <div class="pt-10">
+                <table class="table table--st2">
+                  <thead>
+                    <tr>
+                      <th>SIZE(cm)</th>
+                      <th>BUST</th>
+                      <th>WAIST</th>
+                      <th>HIPS</th>
+                      <th>LENGTH</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>S</td>
+                      <td>77</td>
+                      <td>63</td>
+                      <td>82</td>
+                      <td>74.5</td>
+                    </tr>
+                    <tr>
+                      <td>M</td>
+                      <td>82</td>
+                      <td>68</td>
+                      <td>89</td>
+                      <td>76</td>
+                    </tr>
+                    <tr>
+                      <td>L</td>
+                      <td>90</td>
+                      <td>76</td>
+                      <td>97</td>
+                      <td>78.5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="tab_review" class="tab-content pb-25">
+              <div class="pt-10">
+                <div class="tab-area mt-0 d-flex justify-content-between mb-4">
+                  <ul class="tab tab--text mb-0">
+                    <li><a href="" class="on">전체</a></li>
+                    <li><a href="" class="">텍스트</a></li>
+                    <li><a href="" class="">포토</a></li>
+                    <li><a href="" class="">SNS</a></li>
+                  </ul>
+                  <select class="sorting-select">
+                    <option value="">최근 작성 순</option>
+                    <option value="">별점 높은 순</option>
+                    <option value="">좋아요 많은 순</option>
+                  </select>
+                </div>
+                <div class="review-list">
+                  <div class="review-list__item">
+                    <div class="review-list__head">
+                      <div class="d-flex flex-wrap align-items-center position-relative">
+                        <div class="review-head__img">
+                          <div class="img">
+                            <img src="../images/board/no_img.jpg" alt="리뷰 이미지">
+                          </div>
+                        </div>
+                        <div class="review-head__info">
+                          <div class="review-type text-primary font-12">[SNS리뷰]</div>
+                          <div class="review-writer row mx-n3">
+                            <div class="review-writer__item col-auto px-3">Lv 1</div>
+                            <div class="review-writer__item col-auto px-3">ab***</div>
+                            <div class="review-writer__item col-auto px-3">2021.01.01</div>
+                          </div>
+
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+                              <div class="ratings readonly">
+                                <input type="hidden" name="" id="ratings-score" value="3" />
+                                <div class="ratings__star">
+                                  <div class="star on" data-value="1"></div>
+                                  <div class="star on" data-value="2"></div>
+                                  <div class="star on" data-value="3"></div>
+                                  <div class="star" data-value="4"></div>
+                                  <div class="star" data-value="5"></div>
+                                </div>
+                                <div class="ratings__text ml-1">3</div>
+                              </div>
+                            </div>
+                            <div class="col-auto pl-4">
+                              <a href="javascript:void(0);" class="like-counting">
+                                <span class="like-counting__icon"></span>
+                                <span class="like-counting__text ml-1">52</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="review-toggle-btn">
+                          <img src="../assets/images/icon/arrow1.svg" alt="arrow">
+                        </button>
+                      </div>
+
+                      <div class="review-head__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+                    </div>
+                    <div class="review-list__body">
+                      <div class="review-body__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+                      <div class="sns-link review-body__sns font-12">
+                        <span class="rounded-pill badge">SNS</span>
+                        <a href="" target="_blank" class="link">https://www.facebook.com/freewebclub/?hc_ref=ARSMkcBOjky3G2AGR89-vcXwPVrLPEato2VXD1-SZBC7FAN7FOw2vGYYzP3zEVWyg1M&fref=nf&__tn__=kC-R</a>
+                      </div>
+
+                      <div class="review-body__img">
+                        <!-- 높이 200px 고정. -->
+                        <img src="../images/board/product_banner_1.jpg" height="200" alt="리뷰 이미지">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="review-list__item">
+                    <div class="review-list__head">
+                      <div class="d-flex flex-wrap align-items-center position-relative">
+                        <div class="review-head__img">
+                          <div class="img">
+                            <img src="../images/board/no_img.jpg" alt="리뷰 이미지">
+                          </div>
+                        </div>
+                        <div class="review-head__info">
+                          <div class="review-type text-primary font-12">[포토리뷰]</div>
+                          <div class="review-writer row mx-n3">
+                            <div class="review-writer__item col-auto px-3">Lv 1</div>
+                            <div class="review-writer__item col-auto px-3">ab***</div>
+                            <div class="review-writer__item col-auto px-3">2021.01.01</div>
+                          </div>
+
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+                              <div class="ratings readonly">
+                                <input type="hidden" name="" id="ratings-score" value="3" />
+                                <div class="ratings__star">
+                                  <div class="star on" data-value="1"></div>
+                                  <div class="star on" data-value="2"></div>
+                                  <div class="star on" data-value="3"></div>
+                                  <div class="star" data-value="4"></div>
+                                  <div class="star" data-value="5"></div>
+                                </div>
+                                <div class="ratings__text ml-1">3</div>
+                              </div>
+                            </div>
+                            <div class="col-auto pl-4">
+                              <a href="javascript:void(0);" class="like-counting">
+                                <span class="like-counting__icon"></span>
+                                <span class="like-counting__text ml-1">52</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="review-toggle-btn">
+                          <img src="../assets/images/icon/arrow1.svg" alt="arrow">
+                        </button>
+                      </div>
+
+                      <div class="review-head__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+                    </div>
+                    <div class="review-list__body">
+                      <div class="review-body__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+
+                      <div class="review-body__img">
+                        <!-- 높이 200px 고정. -->
+                        <img src="../images/board/product_banner_1.jpg" height="200" alt="리뷰 이미지">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="review-list__item">
+                    <div class="review-list__head">
+                      <div class="d-flex flex-wrap align-items-center position-relative">
+                        <div class="review-head__info">
+                          <div class="review-type text-primary font-12">[텍스트리뷰]</div>
+                          <div class="review-writer row mx-n3">
+                            <div class="review-writer__item col-auto px-3">Lv 1</div>
+                            <div class="review-writer__item col-auto px-3">ab***</div>
+                            <div class="review-writer__item col-auto px-3">2021.01.01</div>
+                          </div>
+
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+                              <div class="ratings readonly">
+                                <input type="hidden" name="" id="ratings-score" value="3" />
+                                <div class="ratings__star">
+                                  <div class="star on" data-value="1"></div>
+                                  <div class="star on" data-value="2"></div>
+                                  <div class="star on" data-value="3"></div>
+                                  <div class="star" data-value="4"></div>
+                                  <div class="star" data-value="5"></div>
+                                </div>
+                                <div class="ratings__text ml-1">3</div>
+                              </div>
+                            </div>
+                            <div class="col-auto pl-4">
+                              <a href="javascript:void(0);" class="like-counting">
+                                <span class="like-counting__icon on"></span>
+                                <span class="like-counting__text ml-1">99+</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="review-toggle-btn">
+                          <img src="../assets/images/icon/arrow1.svg" alt="arrow">
+                        </button>
+                      </div>
+
+                      <div class="review-head__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+                    </div>
+                    <div class="review-list__body">
+                      <div class="review-body__text">
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 
+                        리뷰내용 노출 리뷰내용 노출 리뷰내용 노출 리뷰내용 노출  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab_qna" class="tab-content pb-25">
+              <div id="qna-bx"  class="pt-10">
+                <table class="table table--qna">
+                  <colgroup>
+                    <col class="col-w-1">
+                    <col width="*">
+                    <col class="col-w-1">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>문의상태</th>
+                      <th>문의내용</th>
+                      <th>작성자</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>답변대기</td>
+                      <td class="text-left">
+                        <!-- 다른사람의 비밀글일때 'check-pw' 클래스 추가 -->
+                        <a href="javascript:void(0);" class="qna-title check-pw">
+                          상품문의
+                          <i class="xi-lock-o"></i>
+                        </a>
+                        <div class="qna-content">
+                          <div class="qna-content__my">
+                            S사이즈 재입고 예정이 언제인가요?!
+                            <p class="date">2020.01.01</p>
+                          </div> 
+                        </div>
+                      </td>
+                      <td>홍*동</td>
+                    </tr>
+                    <tr>
+                      <td>답변대기</td>
+                      <td class="text-left">
+                        <!-- 나의 비밀글일때 'check-pw' 클래스 제거 -->
+                        <a href="javascript:void(0);" class="qna-title">
+                          상품문의
+                          <i class="xi-lock-o"></i>
+                        </a>
+                        <div class="qna-content">
+                          <div class="qna-content__my">
+                            S사이즈 재입고 예정이 언제인가요?!
+                            <p class="date">2020.01.01</p>
+                          </div> 
+                        </div>
+                      </td>
+                      <td>홍*동</td>
+                    </tr>
+                    <tr>
+                      <td>답변완료</td>
+                      <td class="text-left">
+                        <!-- 일반글일때 'check-pw' 클래스 제거 -->
+                        <a href="javascript:void(0);" class="qna-title">
+                          상품문의
+                        </a>
+                        <div class="qna-content">
+                          <div class="qna-content__my">
+                            S사이즈 재입고 예정이 언제인가요?!
+                            <p class="date">2020.01.01</p>
+                          </div> 
+                          <div class="qna-content__answer">
+                            <p class="answer-tit">답변</p>
+                            현재 S사이즈의 재입고 예정이 없습니다.<br>
+                            감사합니다.
+                            <p class="date">2020.01.01</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>홍*동</td>
+                    </tr>
+                  </tbody>
+                </table>
+  
+                <div class="d-flex justify-content-between align-items-center mt-5">
+                  <div class="paging-area mt-0">
+                    <ul>
+                      <li>
+                        <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="active">1<span></span></a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">2<span></span></a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">3<span></span></a>
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="next"><span>다음으로</span></a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <button type="button" class="btn-type-03 btn-type-03--small qna-write-btn">작성</button>
+                </div>
+  
+                <div class="qna-write-bx">
+                  <table class="table table--qna table--write">
+                    <colgroup>
+                      <col class="col-w-1">
+                      <col width="*">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>작성자</th>
+                        <td class="text-left">홍길동</td>
+                      </tr>
+                      <tr>
+                        <th>비밀글</th>
+                        <td class="text-left">
+                          <input type="checkbox" name="pw-chk" id="pw-chk">
+                          <label for="pw-chk">비밀글 작성</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>문의 유형</th>
+                        <td class="text-left">
+                          <select name="inquiry_type" id="inquiry_type" class="w-100">
+                            <option value="">문의 유형을 선택해주세요</option>
+                            <option value="">소재 문의</option>
+                            <option value="">사이즈 문의</option>
+                            <option value="">재입고 문의</option>
+                            <option value="">기타 문의</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>제목</th>
+                        <td class="text-left">
+                          <input type="text" name="title" id="title" class="w-100">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>문의내용</th>
+                        <td class="text-left">
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <div class="text-right mt-5">
+                    <button type="button" class="btn-type-03 btn-type-03--small">작성완료</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab_guide" class="tab-content pb-25">
+              <div class="pt-10">
+                <table class="table table--st1">
+                  <colgroup>
+                    <col class="w-20">
+                    <col width="*">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                    <tr>
+                      <th>상품 정보 고시 노출</th>
+                      <td>상품 정보 고시 노출</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        
+
+          <!-- S : 관련 아이템 -->
+          <p class="font-14 font-weight-bold">RELATED ITEM</p>
+          <div class="other-product other-product--related">
+            <div class="slick">
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/product_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+              <div class="other-product__item">
+                <a class="img-size" href="">
+                  <img src="../images/board/no_img.jpg" alt="제품 이미지" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- E : 관련 아이템 -->
+
+          <div class="mt-20">
+            <a href="" class="btn-type-03">목록</a>
+          </div>
+          
+          <!-- S : 회원가입 안내 모달팝업 -->
+          <? include "../pop/login.html" ?>
+          <!-- E : 회원가입 안내 모달팝업 -->
+
+          <!-- S : 장바구니 안내 모달팝업 -->
+          <? include "../pop/cart_check.html" ?>
+          <!-- E : 장바구니 안내 모달팝업 -->
+
+          <!-- S : 렌탈 상품 리스트 모달팝업 (상품이 3개 담기기 전까지) -->
+          <? include "../pop/experience_product.html" ?>
+          <!-- E : 렌탈 상품 리스트 모달팝업 (상품이 3개 담기기 전까지) -->
+
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script>
+      $('.review-toggle-btn, .review-head__text').on('click', function(){
+        $(this).parents('.review-list__item').toggleClass('active');
+        // $(this).parents('.review-list__item').find('.review-toggle-btn').toggleClass('active');
+        // $(this).parents('.review-list__item').children('.review-list__body').stop(false, true).slideToggle(0);
+      });
+
+      $('.tab > li > a').on('click', function() {
+        var linkName = $(this).attr('href');
+        var linkPos = $(linkName).offset().top;
+        $('html, body').animate({scrollTop : linkPos - '157'}, 700);
+      });
+      
+      function prodviewScroll_front() {
+        var scrTop = $(window).scrollTop() + $('.header').outerHeight(),
+            scrBtm = $(window).scrollTop() + $(window).height(),
+            prodViewTop = $('.product-view-page').offset().top - 20,
+            prodWrapBtm = $('.product-view-page').offset().top + $('.product-view-page').outerHeight();
+
+        if ( scrTop > prodViewTop ) {
+          if ( scrBtm < prodWrapBtm + $('.header').outerHeight() ) {
+            $('.product-info ').addClass('fix');
+          } else {
+            $('.product-info ').removeClass('fix').addClass('btm');
+          }
+        } else {
+          $('.product-info').removeClass('fix btm');
+        }
+      }
+
+      function tabScroll_front() {
+        $('.tab-area.scroll-function').each(function(){       
+          var scrTop = $(window).scrollTop() + $('.header').outerHeight(),
+              scrBtm = $(window).scrollTop() + $(window).height(),
+              tabTop = $(this).offset().top - 21,
+              tabdWrapBtm = $(this).offset().top + $(this).outerHeight();
+
+          if ( scrTop > tabTop ) {
+            $('.tab-area').removeClass('fix');
+            $(this).addClass('fix');
+          } else {
+            $(this).removeClass('fix');
+          }
+        });
+      }
+      
+      $(document).ready(function(){
+        prodviewScroll_front();
+        tabScroll_front();
+      });
+      $(window).on('scroll', function(){
+        prodviewScroll_front();
+        tabScroll_front();
+      });
+
+      var scrollst = $('.scrollSt');
+      scrollst.mCustomScrollbar({
+        theme: 'minimal',
+      });
+      function closePopup() {
+        $.magnificPopup.close();
+      }
+      
+    </script>
+  </body>
+</html>

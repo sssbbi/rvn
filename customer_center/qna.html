@@ -1,0 +1,213 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "cs";
+    $P_dp2 = "3";
+    include "../include/meta.html" ?>
+  </head>
+  <body class="sub-body">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
+            <a href="../main/main.html">HOME</a>
+          </li>
+          <li class="breadcrumb__item">고객센터</li>
+          <li class="breadcrumb__item">1:1 문의</li>
+        </ul>
+      </div>
+
+      <div class="tab-area mt-0">
+        <div class="container">
+          <ul class="tab tab--st2">
+            <li>
+              <a href="<?=$nav_cs_1_href?>"><?=$nav_cs_1?></a>
+            </li>
+            <li>
+              <a href="<?=$nav_cs_2_href?>"><?=$nav_cs_2?></a>
+            </li>
+            <li>
+              <a class="on" href="<?=$nav_cs_3_href?>"><?=$nav_cs_3?></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="cs-page pt-6">
+        <div class="container">
+          <h4 class="h4 mb-5">1:1 문의</h4>
+
+          <table class="table table--qna">
+            <colgroup>
+              <col class="w-10" />
+              <col width="*" />
+              <col class="w-10" />
+              <col class="w-10" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>문의상태</th>
+                <th>문의내용</th>
+                <th>작성자</th>
+                <th>작성일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>문의접수</td>
+                <td class="text-left">
+                  <!-- 다른사람의 비밀글일때 'check-pw' 클래스 추가 -->
+                  <a href="javascript:void(0);" class="qna-title check-pw">
+                    <p class="type">배송문의</p>
+                    배송 문의합니다.
+                    <i class="xi-lock-o"></i>
+                  </a>
+                  <div class="qna-content">
+                    <div class="qna-content__my">어제 결제 했는데 배송은 언제 되나요?</div>
+
+                    <div class="qna-content__product">
+                      <p class="order-number">주문번호 2020101012345</p>
+
+                      <div class="product-list product-list--type3">
+                        <div class="product-list__item product-list__item--type3">
+                          <div class="inner">
+                            <a href="../product/view.html" class="img-bx">
+                              <span class="img-size">
+                                <img src="../images/board/product_img.jpg" alt="상품 이미지" />
+                              </span>
+                            </a>
+                            <div class="txt-bx">
+                              <p class="brand-name">BRAND NAME</p>
+                              <p class="product-name">PRODUCT NAME</p>
+
+                              <div class="now-status">Size : L</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="qna-content__btn">
+                      <a class="btn-type-03 btn-type-03--xsmall" href="qna__write.html">수정</a>
+                      <a class="btn-type-03 btn-type-03--xsmall popup-link" href="../pop/delete_alert.html">삭제</a>
+                    </div>
+                  </div>
+                </td>
+                <td>홍*동</td>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <td>답변확인중</td>
+                <td class="text-left">
+                  <a href="javascript:void(0);" class="qna-title">
+                    <p class="type">배송문의</p>
+                    배송 문의합니다.
+                    <i class="xi-lock-o"></i>
+                  </a>
+                  <div class="qna-content">
+                    <div class="qna-content__my">어제 결제 했는데 배송은 언제 되나요?</div>
+
+                    <div class="qna-content__product">
+                      <p class="order-number">주문번호 2020101012345</p>
+
+                      <div class="product-list product-list--type3">
+                        <div class="product-list__item product-list__item--type3">
+                          <div class="inner">
+                            <a href="../product/view.html" class="img-bx">
+                              <span class="img-size">
+                                <img src="../images/board/product_img.jpg" alt="상품 이미지" />
+                              </span>
+                            </a>
+                            <div class="txt-bx">
+                              <p class="brand-name">BRAND NAME</p>
+                              <p class="product-name">PRODUCT NAME</p>
+
+                              <div class="now-status">Size : L</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="qna-content__btn">
+                      <a class="btn-type-03 btn-type-03--xsmall" href="qna__write.html">수정</a>
+                      <a class="btn-type-03 btn-type-03--xsmall popup-link" href="../pop/delete_alert.html">삭제</a>
+                    </div>
+                  </div>
+                </td>
+                <td>홍*동</td>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <td>답변완료</td>
+                <td class="text-left">
+                  <a href="javascript:void(0);" class="qna-title">
+                    <p class="type">사이트 이용</p>
+                    사이트 이용 문의합니다.
+                    <i class="xi-lock-o"></i>
+                  </a>
+
+                  <div class="qna-content">
+                    <div class="qna-content__my">사이트 이용이 너무 어렵습니다.</div>
+
+                    <div class="qna-content__answer">
+                      <p class="answer-tit">답변</p>
+                      <div class="answer-cont">사이트가 어렵게 제작되어 정말 죄송합니다.</div>
+                      <p class="date">2020.01.01</p>
+                    </div>
+                  </div>
+                </td>
+                <td>홍*동</td>
+                <td>2020.01.01</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="d-flex justify-content-between align-items-center mt-8">
+            <div class="paging-area mt-0">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="active">1<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;">2<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;">3<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="next"><span>다음으로</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="qna__write.html" class="btn-type-03 font-14">문의하기</a>
+          </div>
+
+          <div class="board-search-01">
+            <form method="POST" action="?" id="searchForm">
+              <fieldset>
+                <legend class="hidden">검색</legend>
+                <select name="find_field" title="search" class="select-type-01">
+                  <option value="title">제목</option>
+                  <option value="content">내용</option>
+                </select>
+                <input type="text" title="검색어" class="input-type-01" name="find_word" value="" />
+                <input type="submit" value="검색" class="btn btn-color-01" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    $P_dp2 = "1";
+    include "../include/meta.html" ?>
+
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+  </head>
+  <body class="sub-body mypage">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="my-page">
+        <!-- S : 마이페이지 메뉴 -->
+        <? include "mypage_nav.html" ?>
+        <!-- E : 마이페이지 메뉴 -->
+
+        <!-- S : 나의 회원 등급 -->
+        <? include "my_level.html" ?>
+        <!-- E : 나의 회원 등급 -->
+
+        <div class="py-5">
+          <div class="container">
+            <!-- S : 주문 상품 정보 -->
+            <h5 class="mb-3 h5 font-weight-bold">주문/결제 내역 상세</h5>
+            <div class="myp-product">
+              <div class="recently-bx bg-light p-4">
+                <div class="row align-items-center no-gutters">
+                  <p class="recently-bx__tit">주문번호</p>
+                  <p class="recently-bx__txt">2021010101213</p>
+
+                  <!-- <a href="order_list__detail.html" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 ml-2">자세히 보기</a> -->
+                </div>
+                <div class="row align-items-center no-gutters mt-2">
+                  <p class="recently-bx__tit">렌트신청일</p>
+                  <p class="recently-bx__txt">2021. 01. 01</p>
+
+                  <p class="recently-bx__tit">반납일</p>
+                  <p class="recently-bx__txt">2021. 01. 01</p>
+                </div>
+              </div>
+
+              <div class="mt-4 px-4 py-3 border-top border-bottom">
+                <div class="row align-items-center no-gutters">
+                  <p class="recently-bx__tit">렌트상태</p>
+                  <p class="recently-bx__txt">배송중</p>
+                </div>
+              </div>
+
+              <div class="product-list m-0">
+                <div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+                  <div class="inner">
+                    <a href="../product/view.html" class="img-bx">
+                      <span class="img-size">
+                        <img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+                      </span>
+                    </a>
+                    <div class="txt-bx">
+                      <p class="brand-name text-gray-0">BRAND NAME</p>
+                      <p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+                      <div class="now-status w-100 pl-4 d-flex justify-content-between">
+                        <p>Size : L</p>
+                        <a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-list__item product-list__item--type3 mt-0 py-4 border-bottom">
+                  <div class="inner">
+                    <a href="../product/view.html" class="img-bx">
+                      <span class="img-size">
+                        <img src="../../images/board/product_img.jpg" alt="상품 이미지" />
+                      </span>
+                    </a>
+                    <div class="txt-bx">
+                      <p class="brand-name text-gray-0">BRAND NAME</p>
+                      <p class="product-name">PRODUCT NAME PRODUCT NAME PRODUCT NAME PRODUCT NAME</p>
+
+                      <div class="now-status w-100 pl-4 d-flex justify-content-between">
+                        <p>Size : L</p>
+                        <a class="link-btn" href="javascript:void(0);">리뷰작성</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- E : 주문 상품 정보 -->
+
+            <!-- S : 결제정보 -->
+            <div class="pt-5 pb-3 border-bottom">
+              <h5 class="h5 mb-3 font-weight-bold">결제정보</h5>
+              <table class="table table--shipping common-text--xxs">
+                <colgroup>
+                  <col class="col-w-1" />
+                  <col width="*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>결제분류</th>
+                    <td>정기결제 / 다음 예상 결제일 : 2020년 12월 25일</td>
+                  </tr>
+                  <tr>
+                    <th>결제수단</th>
+                    <td>신용카드 (현대카드)</td>
+                  </tr>
+                  <tr>
+                    <th>결제금액</th>
+                    <td>￦ 120,000</td>
+                  </tr>
+                  <tr>
+                    <th>결제일시</th>
+                    <td>2020년 11월 25일 12시 25분</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- E : 결제정보 -->
+
+            <!-- S : 배송지 정보 -->
+            <div class="pt-5 pb-3 border-bottom">
+              <h5 class="h5 mb-3 font-weight-bold">배송지 정보</h5>
+              <table class="table table--shipping common-text--xxs">
+                <colgroup>
+                  <col class="col-w-1" />
+                  <col width="*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>받는분</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th>연락처</th>
+                    <td>010-1234-5678</td>
+                  </tr>
+                  <tr>
+                    <th>배송지</th>
+                    <td>서울시 마포구 동교로 23길 6, 달리빌딩 1층</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- E : 배송지 정보 -->
+
+            <!-- S : 반납지 정보 -->
+            <div class="pt-5 pb-3 border-bottom">
+              <div class="mb-2 d-flex align-items-center">
+                <h5 class="h5 font-weight-bold">반납지 정보</h5>
+                <a href="../pop/shipping_address_write2.html" class="btn-type-05 btn-type-05--xsmall bg-white border px-2 ml-2 popup-link">반납지 정보 수정</a>
+              </div>
+              <table class="table table--shipping common-text--xxs">
+                <colgroup>
+                  <col class="col-w-1" />
+                  <col width="*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>보내는분</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th>연락처</th>
+                    <td>010-1234-5678</td>
+                  </tr>
+                  <tr>
+                    <th>반납지</th>
+                    <td>서울시 마포구 동교로 23길 6, 달리빌딩 1층</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- E : 반납지 정보 -->
+
+            <div class="text-right mt-10">
+              <a href="" class="btn-type-03">목록</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

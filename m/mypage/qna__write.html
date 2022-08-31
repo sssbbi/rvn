@@ -1,0 +1,105 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <? $P_dp1 = "mypage";
+    $P_dp2 = "6";
+    include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+    <link rel="stylesheet" href="../assets/css/member.min.css" />
+  </head>
+  <body class="sub-body mypage">
+    <? include "../include/header.html" ?>
+
+    <main class="main sub-main">
+      <section class="my-page">
+        <!-- S : 마이페이지 메뉴 -->
+        <? include "mypage_nav.html" ?>
+        <!-- E : 마이페이지 메뉴 -->
+
+        <!-- S : 나의 회원 등급 -->
+        <? include "my_level.html" ?>
+        <!-- E : 나의 회원 등급 -->
+
+        <div class="container pt-5">
+          <table class="table table--qna table--write __responsive">
+            <colgroup>
+              <col class="col-w-1" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>분류</th>
+                <td class="text-left">
+                  <select name="" id="" class="w-100">
+                    <option value="">문의 유형을 선택해주세요</option>
+                    <option value="">주문/배송 문의</option>
+                    <option value="">반납 문의</option>
+                    <option value="">멤버십 문의</option>
+                    <option value="">사이트 이용 문의</option>
+                    <option value="">기타 문의</option>
+                  </select>
+                </td>
+              </tr>
+              <!-- 위 문의유형이 '주문/배송문의', '반납문의' 일때만 노출 -->
+              <tr>
+                <th>주문내역</th>
+                <td class="text-left">
+                  <div class="row no-gutters">
+                    <div class="col pr-1">
+                      <input type="text" class="w-100" id="" name="" readonly />
+                    </div>
+                    <div class="col-auto">
+                      <a href="../pop/ordered_product_list.html" class="popup-link btn-type-03 px-5">조회</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>제목</th>
+                <td class="text-left">
+                  <input type="text" name="title" id="title" class="w-100" />
+                </td>
+              </tr>
+              <tr>
+                <th>내용</th>
+                <td class="text-left">
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th>이미지</th>
+                <td class="text-left file-bx-wrap">
+                  <div class="file-bx">
+                    <div class="input_wrap file_box">
+                      <p></p>
+                      <span class="btn_type_file">파일선택</span>
+                      <input type="file" name="bf_file[]" />
+                    </div>
+                    <button type="button" class="xi-plus btn-type-04 add-file" title="추가"></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="text-right mt-8">
+            <input type="submit" class="btn-type-03" value="문의하기" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script>
+      $(document).on('click', '.add-file', function () {
+        var fileBx = '<div class="file-bx">\n' + '\t<div class="input_wrap file_box">\n' + '\t\t<p></p>\n' + '\t\t<span class="btn_type_file">파일선택</span>\n' + '\t\t<input type="file" name="bf_file[]" />\n' + '\t</div>\n' + '\t<button type="button" class="xi-close btn-type-04 remove-file" title="삭제"></button>\n' + '</div>\n';
+        $('.file-bx-wrap').append(fileBx);
+      });
+      $(document).on('click', '.remove-file', function () {
+        $(this).parent('.file-bx').remove();
+      });
+    </script>
+  </body>
+</html>

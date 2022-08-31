@@ -1,0 +1,45 @@
+<header id="header" class="header">
+  <div class="container">
+    <? if ($P_dp0 == 'main') {?>
+    <!-- S : 메인에서만 로고 노출 -->
+    <div class="logo">
+      <a href="../main/main.html">
+        <img src="../assets/images/main/logo_text.png" width="196" alt="RVN EXPERIENCE" />
+      </a>
+    </div>
+    <!-- E : 메인에서만 로고 노출 -->
+    <?} else{?>
+    <!-- S : 서브에서 현재 위치 노출 -->
+    <div class="current-page">
+      <? if ($P_page_txt == null) {?>
+      <a href="javascript:history.go(-1);" class="current-page__link">
+        <img src="../assets/images/icon/arrow1.svg" />
+      </a>
+      <?} else if ($P_dp0 == 'product') {?>
+      <a href="javascript:history.go(-1);" class="current-page__link">
+        <img src="../assets/images/icon/arrow1.svg" />
+      </a>
+      <? }?>
+      <div class="current-page__txt <?if($P_dp0 == 'product') {?>font-weight-bold<? }?>">
+      <? if ($P_page_txt == null) {?>
+        <? if ($P_dp2 == null) {?>
+          <?=${nav_.$P_dp1}?>
+        <?} else{?>
+          <?=${nav_.$P_dp1._.$P_dp2}?>
+        <? }?>
+      <?} else{?>
+        <?=$P_page_txt?>
+      <? }?>
+      </div>
+    </div>
+    <!-- E : 서브에서 현재 위치 노출 -->
+    <? }?>
+
+    <a class="cart" href="../order/shopping_bag.html" title="장바구니">
+      <img src="../assets/images/icon/header_util_i3.svg" alt="쇼핑백" />
+      <span class="count">2</span>
+    </a>
+  </div>
+</header>
+
+<? include "../include/aside.html" ?>

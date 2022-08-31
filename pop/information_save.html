@@ -1,0 +1,21 @@
+<div class="pop-wrap w-450 no-close">
+  <div class="pop-header text-center">
+    <h5 class="h5 font-weight-medium">회원 정보를 변경 하시겠습니까?</h5>
+  </div>
+  <div class="pop-body text-center">
+    <p>변경 버튼 클릭 시</p>
+    <p class="mt-2">변경된 회원 정보를 저장 후</p>
+    <p class="mt-2">마이페이지 메인화면으로 이동합니다.</p>
+  </div>
+  <div class="pop-footer">
+    <div class="btn-bx">
+      <button type="button" class="btn btn-type-04" onclick="closePopup();">취소</button>
+      <button type="button" class="btn btn-type-03" onclick="location.href='../mypage/index.html'">변경</button>
+    </div>
+  </div>
+</div>
+<script>
+  function closePopup() {
+    $.magnificPopup.close();
+  }
+</script>
